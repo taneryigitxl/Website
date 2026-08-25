@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Taner Yiğit · Bilgi işlem, BT operasyonları ve siber güvenlik." />
-    <meta name="theme-color" content="#05070a" />
+    <meta name="theme-color" content="#000000" />
     <meta property="og:title" content="Taner Yiğit | Bilgi İşlem" />
     <meta property="og:description" content="Bilgi işlem, BT operasyonları ve siber güvenlik." />
     <meta property="og:type" content="website" />
@@ -12,88 +12,63 @@
     <title>Taner Yiğit | Bilgi İşlem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">İçeriğe geç</a>
     <header class="site-header">
-      <div class="nav-shell">
-        <a class="brand" href="#top" aria-label="Taner Yiğit ana sayfa"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Taner Yiğit</span></a>
-        <nav class="site-nav" aria-label="Ana navigasyon"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#project">Proje</a></nav>
-        <a class="nav-cta" href="#contact">İletişim <span aria-hidden="true">↗</span></a>
-      </div>
+      <a class="brand" href="#top" aria-label="Taner Yiğit ana sayfa"><svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 23 12.5 4l3.7 10.1L25 9l-7.2 15-5.1-7.1L3 23Z" /></svg><span>Taner Yiğit</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Ana navigasyon"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#project">Proje</a></nav>
+      <a class="pill nav-cta" href="#contact">İletişim</a>
     </header>
     <main id="content">
-      <section id="top" class="hero">
-        <div class="hero-copy">
-          <div class="hero-portrait">
-            <img src="assets/taner-yigit.jpg" alt="Taner Yiğit vesikalık fotoğrafı" />
-            <span class="portrait-corner corner-top" aria-hidden="true"></span>
-            <span class="portrait-corner corner-bottom" aria-hidden="true"></span>
-          </div>
-          <p class="eyebrow"><span class="status-dot"></span> Bilgi İşlem · BT Operasyonları</p>
-          <h1><span>Sistemleri ayakta,</span><br />iş akışını güvende tutuyorum.</h1>
-          <p class="hero-lead">Kurumsal IT altyapısı, kullanıcı desteği, ağ operasyonları ve siber güvenlik odağında güvenilir teknoloji çözümleri üretiyorum.</p>
-          <div class="hero-actions"><a class="button button-accent" href="#contact">İletişime geç <span>↗</span></a><a class="button button-ghost" href="#about">Beni tanıyın <span>↓</span></a></div>
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="label"><span></span> Bilgi İşlem · BT Operasyonları</p>
+          <h1>Sistemleri ayakta,<br />iş akışını <em>güvende</em> tutuyorum.</h1>
+          <p class="lead">Kurumsal IT altyapısı, kullanıcı desteği, ağ operasyonları ve siber güvenlik odağında güvenilir teknoloji çözümleri üretiyorum.</p>
+          <a class="pill" href="#contact">İletişime geç <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-object" aria-hidden="true">
-          <div class="halo"></div><div class="cube"><span class="cube-face cube-front">TY</span><span class="cube-face cube-top"></span><span class="cube-face cube-right"></span></div><div class="object-label"><i></i> SYSTEMS ONLINE</div>
+        <div class="constellation-wrap" aria-label="Renkli üçgenlerden oluşan hareketli bilgi ağı görseli" role="img"><canvas id="constellation"></canvas><p class="visual-caption"><span>01</span> COLLECTIVE SYSTEMS</p></div>
+        <a class="scroll-cue" href="#about"><span>Keşfet</span><i aria-hidden="true">↓</i></a>
+      </section>
+      <section id="about" class="section-shell statement-section">
+        <div class="statement-heading reveal"><p class="label amber">01 · Hakkımda</p><h2>Teknolojiyi, iş akışının <em>güvenilir parçası</em> haline getiriyorum.</h2></div>
+        <div class="statement-copy reveal"><p>İstanbul Nişantaşı Üniversitesi Teknoloji Destek Hizmetleri biriminde; kurumsal IT altyapısı, sistem, ağ ve kullanıcı destek operasyonlarında görev alıyorum.</p><p>Sorunları yalnızca çözmeye değil, tekrarını önleyen düzenli ve sürdürülebilir sistemler kurmaya odaklanıyorum.</p><a class="text-link" href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noreferrer">LinkedIn profilim <span>↗</span></a></div>
+        <div class="profile-visual reveal"><img src="assets/taner-yigit.jpg" alt="Taner Yiğit portresi" /><div><span>Konum</span><strong>Kağıthane, İstanbul</strong></div></div>
+        <dl class="facts reveal"><div><dt>Eğitim</dt><dd>Siber Güvenlik<small>İstanbul Kent Üniversitesi</small></dd></div><div><dt>Odak</dt><dd>IT Operasyonları<small>Sistem · Ağ · Destek</small></dd></div><div><dt>Yaklaşım</dt><dd>Sürdürülebilir sistemler<small>Güvenilir · Takip edilebilir</small></dd></div></dl>
+      </section>
+      <section id="expertise" class="section-shell expertise-section">
+        <div class="section-title reveal"><p class="label amber">02 · Odak Alanları</p><h2>İşi ileri taşıyan<br /><em>sağlam altyapı.</em></h2></div>
+        <div class="capability-list">
+          <article class="capability reveal"><span>01</span><h3>Kurumsal IT Operasyonları</h3><p>Altyapı, sistem ve ağ desteğini kapsayan günlük bilgi işlem operasyonları.</p><i>↗</i></article>
+          <article class="capability reveal"><span>02</span><h3>Kullanıcı ve Teknik Destek</h3><p>Hızlı yanıt veren, takip edilebilir ve çözüm odaklı destek süreçleri.</p><i>↗</i></article>
+          <article class="capability reveal"><span>03</span><h3>Ağ ve Sistem Güvenliği</h3><p>TCP/IP, OSI, subnetting, Linux ve sanallaştırma teknolojileri.</p><i>↗</i></article>
+          <article class="capability reveal"><span>04</span><h3>Uygulama Güvenliği</h3><p>OWASP Top 10, Nmap, Burp Suite ve Metasploit ile temel güvenlik analizi.</p><i>↗</i></article>
+          <article class="capability reveal"><span>05</span><h3>Bakım ve Teknik Servis</h3><p>Masaüstü ve dizüstü cihazlarda arıza tespiti, bakım, kurulum ve parça değişimi.</p><i>↗</i></article>
+          <article class="capability reveal"><span>06</span><h3>Sistem Optimizasyonu</h3><p>Performans iyileştirme, yazılım sadeleştirme ve güvenli debloat işlemleri.</p><i>↗</i></article>
         </div>
       </section>
-      <section id="about" class="section about">
-        <div class="section-intro">
-          <div><p class="eyebrow">01 · Hakkımda</p><h2>Teknolojiyi, iş akışının <span>güvenilir parçası</span> haline getiriyorum.</h2></div>
-          <div class="section-copy"><p>İstanbul Nişantaşı Üniversitesi Teknoloji Destek Hizmetleri biriminde; kurumsal IT altyapısı, sistem, ağ ve kullanıcı destek operasyonlarında görev alıyorum.</p><p>Sorunları yalnızca çözmeye değil, tekrarını önleyen düzenli ve sürdürülebilir sistemler kurmaya odaklanıyorum.</p></div>
-        </div>
-        <div class="facts-grid">
-          <article><span>Konum</span><strong>Kağıthane, İstanbul</strong></article>
-          <article><span>Eğitim</span><strong>Siber Güvenlik</strong><small>İstanbul Kent Üniversitesi</small></article>
-          <article><span>Odak</span><strong>IT Operasyonları</strong><small>Sistem · Ağ · Destek</small></article>
-          <a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noreferrer"><span>Profil</span><strong>LinkedIn ↗</strong><small>Profesyonel geçmiş</small></a>
-        </div>
+      <section id="project" class="section-shell project-section">
+        <div class="project-orbit reveal" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="orbit-core">AI</span><i class="satellite satellite-one"></i><i class="satellite satellite-two"></i><i class="satellite satellite-three"></i></div>
+        <div class="project-copy reveal"><p class="label amber">03 · Güncel Proje</p><p class="status"><i></i> Geliştirme aşamasında</p><h2>Yapay zekâ destekli<br /><em>iki boyutlu oyun.</em></h2><p>yigittaner.online üzerinde geliştirdiğim proje, iki boyutlu oyun mekaniklerini yapay zekâ destekli sistemlerle buluşturuyor. Teknik altyapı, oyun içi etkileşimler ve kullanıcı deneyimi üzerindeki çalışmalar sürüyor.</p><a class="text-link" href="https://yigittaner.online" target="_blank" rel="noreferrer">Projeyi inceleyin <span>↗</span></a></div>
       </section>
-      <section id="expertise" class="section expertise">
-        <div class="section-heading"><p class="eyebrow">02 · Odak Alanları</p><h2>İşi ileri taşıyan<br /><span>sağlam altyapı.</span></h2><p>Günlük destekten altyapı güvenliğine kadar uçtan uca, takip edilebilir teknik süreçler.</p></div>
-        <div class="capability-grid">
-          <article class="capability-card"><div class="iso-icon icon-cube" aria-hidden="true"><i></i><i></i><i></i></div><p class="card-index">01 / OPERATIONS</p><h3>Kurumsal IT Operasyonları</h3><p>Altyapı, sistem ve ağ desteğini kapsayan günlük bilgi işlem operasyonları.</p></article>
-          <article class="capability-card"><div class="iso-icon icon-layers" aria-hidden="true"><i></i><i></i><i></i></div><p class="card-index">02 / SUPPORT</p><h3>Kullanıcı ve Teknik Destek</h3><p>Hızlı yanıt veren, takip edilebilir ve çözüm odaklı destek süreçleri.</p></article>
-          <article class="capability-card"><div class="iso-icon icon-bars" aria-hidden="true"><i></i><i></i><i></i></div><p class="card-index">03 / SECURITY</p><h3>Ağ ve Sistem Güvenliği</h3><p>TCP/IP, OSI, subnetting, Linux ve sanallaştırma teknolojileri.</p></article>
-          <article class="capability-card compact-card"><p class="card-index">04 / APPLICATION</p><h3>Uygulama Güvenliği</h3><p>OWASP Top 10, Nmap, Burp Suite ve Metasploit ile temel güvenlik analizi.</p></article>
-          <article class="capability-card compact-card"><p class="card-index">05 / HARDWARE</p><h3>Bakım ve Teknik Servis</h3><p>Masaüstü ve dizüstü cihazlarda arıza tespiti, bakım, kurulum ve parça değişimi.</p></article>
-          <article class="capability-card compact-card"><p class="card-index">06 / OPTIMIZATION</p><h3>Sistem Optimizasyonu</h3><p>Performans iyileştirme, yazılım sadeleştirme ve güvenli debloat işlemleri.</p></article>
-        </div>
-      </section>
-      <section id="project" class="section project">
-        <div class="project-copy"><p class="eyebrow">03 · Güncel Proje</p><div class="live-chip"><i></i> GELİŞTİRME AŞAMASINDA</div><h2>Yapay zekâ destekli<br /><span>iki boyutlu oyun.</span></h2><p>yigittaner.online üzerinde geliştirdiğim proje, iki boyutlu oyun mekaniklerini yapay zekâ destekli sistemlerle buluşturuyor. Teknik altyapı, oyun içi etkileşimler ve kullanıcı deneyimi üzerindeki çalışmalar sürüyor.</p><a class="button button-ghost" href="https://yigittaner.online" target="_blank" rel="noreferrer">Projeyi inceleyin <span>↗</span></a></div>
-        <div class="terminal" aria-label="Proje geliştirme durumu">
-          <div class="terminal-bar"><div class="terminal-dots"><i></i><i></i><i></i></div><span>yigittaner.online / build.log</span></div>
-          <div class="terminal-body"><p><span class="comment">// AI assisted 2D game</span></p><p><span class="keyword">const</span> project = {</p><p class="indent">name: <span class="string">"YigitTaner Online"</span>,</p><p class="indent">engine: <span class="string">"2D"</span>,</p><p class="indent">ai: <span class="boolean">true</span>,</p><p class="indent">status: <span class="string">"in-development"</span></p><p>};</p><p class="terminal-command"><span>›</span> npm run build<span class="cursor"></span></p><div class="build-row"><span>Systems</span><strong>ONLINE</strong></div><div class="build-row"><span>Progress</span><strong>ACTIVE</strong></div></div>
-        </div>
-      </section>
-      <section class="section timeline-section">
-        <div class="section-heading"><p class="eyebrow">04 · Deneyim & Eğitim</p><h2>Teknik temel,<br /><span>sahada deneyim.</span></h2></div>
+      <section class="section-shell experience-section">
+        <div class="section-title reveal"><p class="label amber">04 · Deneyim &amp; Eğitim</p><h2>Teknik temel,<br /><em>sahada deneyim.</em></h2></div>
         <div class="timeline">
-          <article><div class="timeline-meta"><span>2026 · DEVAM</span><i></i></div><div><p>İstanbul Nişantaşı Üniversitesi</p><h3>Bilgi İşlem Uzman Yardımcısı</h3><small>Teknoloji Destek Hizmetleri · İstanbul</small></div></article>
-          <article><div class="timeline-meta"><span>2024 · 2026</span><i></i></div><div><p>İstanbul Kent Üniversitesi</p><h3>Siber Güvenlik</h3><small>Önlisans · Ağ Güvenliği · Linux · Web Güvenliği</small></div></article>
-          <article><div class="timeline-meta"><span>HAZ 2023</span><i></i></div><div><p>10FastFingers Türkiye</p><h3>Top 10 · Advanced Typist</h3><small>150 WPM · %99 doğruluk</small></div></article>
+          <article class="reveal"><time>2026 · Devam</time><div><p>İstanbul Nişantaşı Üniversitesi</p><h3>Bilgi İşlem Uzman Yardımcısı</h3><small>Teknoloji Destek Hizmetleri · İstanbul</small></div><span>●</span></article>
+          <article class="reveal"><time>2024 · 2026</time><div><p>İstanbul Kent Üniversitesi</p><h3>Siber Güvenlik</h3><small>Önlisans · Ağ Güvenliği · Linux · Web Güvenliği</small></div><span>○</span></article>
+          <article class="reveal"><time>Haz 2023</time><div><p>10FastFingers Türkiye</p><h3>Top 10 · Advanced Typist</h3><small>150 WPM · %99 doğruluk</small></div><span>○</span></article>
         </div>
       </section>
-      <section id="contact" class="section contact">
-        <p class="eyebrow">05 · İletişim</p>
-        <div class="contact-inner"><div><h2>Birlikte daha iyi<br /><span>sistemler kuralım.</span></h2><p>Yeni projeler, iş birlikleri ve profesyonel bağlantılar için bana ulaşabilirsiniz.</p></div><div class="contact-actions"><a class="button button-accent" href="mailto:taneryigitxl@gmail.com">E-posta gönder <span>↗</span></a><a href="tel:+905364768669">+90 536 476 86 69</a><a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
-      </section>
-      <section class="legal-links" aria-label="Yasal bilgiler">
-        <nav><a href="#terms">Şartlar</a><a href="#privacy">Gizlilik</a></nav>
-        <div id="terms"><strong>Şartlar</strong><p>İçerik kişisel tanıtım ve profesyonel iletişim amacıyla sunulur.</p></div>
-        <div id="privacy"><strong>Gizlilik</strong><p>Site form, üyelik ve analitik çerez kullanmaz.</p></div>
+      <section id="contact" class="section-shell contact-section">
+        <p class="label amber reveal">05 · İletişim</p>
+        <div class="contact-grid"><h2 class="reveal">Birlikte daha iyi<br /><em>sistemler kuralım.</em></h2><div class="contact-copy reveal"><p>Yeni projeler, iş birlikleri ve profesyonel bağlantılar için bana ulaşabilirsiniz.</p><a class="pill" href="mailto:taneryigitxl@gmail.com">E-posta gönder <span>↗</span></a><div class="contact-links"><a href="tel:+905364768669">+90 536 476 86 69</a><a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></div>
       </section>
     </main>
-    <footer><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Taner Yiğit</span></a><p>© 2026 · İstanbul, TR</p><a href="#top">Yukarı ↑</a></footer>
+    <footer class="section-shell"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 23 12.5 4l3.7 10.1L25 9l-7.2 15-5.1-7.1L3 23Z" /></svg><span>Taner Yiğit</span></a><div class="footer-meta"><p>© 2026 · İstanbul, TR</p><p>İçerik kişisel tanıtım ve profesyonel iletişim amacıyla sunulur. Site form, üyelik ve analitik çerez kullanmaz.</p></div><a class="back-top" href="#top">Yukarı ↑</a></footer>
   </body>
 </html>
-
-
-
-
-
