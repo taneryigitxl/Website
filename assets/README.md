@@ -1,2 +1,2 @@
-Add Taner Yiğit's LinkedIn profile photo here as `taner-yigit.jpg`.
-The site automatically displays it in the hero portrait frame.
+Taner Yiğit'in profil fotoğrafını bu klasörde `taner-yigit.jpg` adıyla tutun.
+Site, görseli hero bölümündeki portre çerçevesinde otomatik olarak gösterir.
