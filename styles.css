@@ -50,7 +50,7 @@ h1 span{display:inline-block;background:linear-gradient(105deg,#98c0ef 4%,#e7f5f
 .facts-grid .fact-icon svg{width:21px;height:21px;fill:none;stroke:var(--frost);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
 .facts-grid .linkedin-icon svg{stroke-width:1.7}
 
-.project-canvas{min-height:590px;padding:42px;grid-template-columns:1.35fr .825fr .825fr;gap:16px;place-items:stretch;align-items:stretch}
+.project-canvas{min-height:590px;padding:42px;grid-template-columns:1.12fr 1.12fr .76fr;gap:16px;place-items:stretch;align-items:stretch}
 .project-card{width:auto;min-height:0;padding:26px;display:flex;flex-direction:column;background:rgba(9,11,23,.9);transition:transform .3s,background .3s,box-shadow .3s}
 .project-card:hover{transform:translateY(-5px);background:rgba(13,16,31,.96);box-shadow:inset 0 1px 1px rgba(216,236,248,.22),0 28px 55px rgba(0,0,0,.45)}
 .project-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -60,6 +60,12 @@ h1 span{display:inline-block;background:linear-gradient(105deg,#98c0ef 4%,#e7f5f
 .project-active .project-glyph{height:100px;margin:20px 0 12px}
 .project-active h3{font-size:38px}
 .project-active>p{margin-bottom:16px}
+.project-glyph.gun-glyph::before,.project-glyph.gun-glyph::after{content:"";position:absolute;background:rgba(186,215,247,.35)}
+.project-glyph.gun-glyph::before{width:112px;height:1px}
+.project-glyph.gun-glyph::after{width:1px;height:112px}
+.project-glyph.gun-glyph span:nth-child(1){width:78px;height:78px;border-radius:50%;transform:none}
+.project-glyph.gun-glyph span:nth-child(2){width:48px;height:48px;border-radius:50%;transform:none;opacity:.55}
+.project-glyph.gun-glyph span:nth-child(3){width:8px;height:8px;border:0;border-radius:50%;background:var(--ice);box-shadow:0 0 16px rgba(209,228,250,.75);transform:none;opacity:1}
 .project-stack{margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px}
 .project-stack span,.soon-label{padding:5px 7px;border-radius:5px;color:#8d9db3;background:rgba(186,214,247,.045);box-shadow:inset 0 0 0 1px rgba(186,215,247,.08);font:400 8px var(--mono);letter-spacing:.04em}
 .project-active .project-link{margin-top:auto}
@@ -82,7 +88,7 @@ h1 span{display:inline-block;background:linear-gradient(105deg,#98c0ef 4%,#e7f5f
 
 @media(pointer:fine){html.has-custom-cursor body,html.has-custom-cursor body *{cursor:none!important}.custom-cursor{--x:-40px;--y:-40px;position:fixed;z-index:9999;left:0;top:0;width:28px;height:28px;pointer-events:none;opacity:0;transform:translate3d(calc(var(--x) - 14px),calc(var(--y) - 14px),0);border:1px solid rgba(205,231,255,.8);border-radius:50%;box-shadow:0 0 16px rgba(152,202,250,.28),inset 0 0 9px rgba(152,202,250,.08);transition:width .18s,height .18s,margin .18s,opacity .18s,background .18s}.custom-cursor i{position:absolute;left:50%;top:50%;width:4px;height:4px;transform:translate(-50%,-50%);border-radius:50%;background:#e9f7ff;box-shadow:0 0 9px #b5dbff}.custom-cursor.is-visible{opacity:1}.custom-cursor.is-active{width:42px;height:42px;margin:-7px;background:rgba(169,211,250,.07)}}
 
-@media(max-width:900px){.project-canvas{grid-template-columns:1fr 1fr}.project-active{grid-column:1/-1}.project-soon{min-height:300px}}
+@media(max-width:900px){.project-canvas{grid-template-columns:1fr 1fr}.project-featured{grid-column:1/-1}.project-gun-card{grid-column:auto}.project-soon{min-height:300px}}
 @media(max-width:700px){.status-card,.location-card{transform:translateY(0)}.portrait-crop{width:140px;height:140px}.project-canvas{min-height:0;padding:18px;grid-template-columns:1fr}.project-active{grid-column:auto;min-height:480px}.project-soon{min-height:280px}.contact-mail{font-size:10px}.contact-mail span{display:none}.contact-actions .contact-email{width:min(100%,230px)}}
 @media(prefers-reduced-motion:no-preference){.status-card{animation:floatLeftStraight 7s ease-in-out infinite}.location-card{animation:floatRightStraight 7.5s ease-in-out infinite}@keyframes floatLeftStraight{50%{transform:translateY(8px)}}@keyframes floatRightStraight{50%{transform:translateY(-7px)}}}
 
