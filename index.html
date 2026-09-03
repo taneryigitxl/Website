@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Taner Yiğit","url":"https://www.yigittaner.com/","image":"https://www.yigittaner.com/assets/taner-yigit.jpg","jobTitle":"Bilgi İşlem Uzman Yardımcısı","email":"mailto:taneryigit.it@gmail.com","sameAs":["https://www.linkedin.com/in/taneryigit/"]}
@@ -37,7 +38,8 @@
   <header class="site-header">
     <nav class="nav-shell" aria-label="Ana navigasyon">
       <a class="brand" href="#top" aria-label="Taner Yiğit ana sayfa"><span class="brand-mark" aria-hidden="true">TY</span><span>Taner Yiğit</span></a>
-      <div class="site-nav"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#project">Aktif Projelerim</a></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
+      <div class="site-nav" id="site-navigation"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#project">Aktif Projelerim</a></div>
       <a class="nav-cta" href="#contact">İletişim <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -130,6 +132,31 @@
       });
       addEventListener('pointerleave', () => cursor.classList.remove('is-visible'));
     }
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    const closeNavigation = () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Menüyü aç');
+      document.body.classList.remove('nav-open');
+    };
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Menüyü aç' : 'Menüyü kapat');
+      document.body.classList.toggle('nav-open', !isOpen);
+    });
+    siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNavigation));
+    addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        closeNavigation();
+        navToggle.focus();
+      }
+    });
+    addEventListener('resize', () => {
+      if (innerWidth > 700) closeNavigation();
+    });
   </script>
 </body>
 </html>
