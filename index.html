@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Taner Yiğit","url":"https://www.yigittaner.com/","image":"https://www.yigittaner.com/assets/taner-yigit.jpg","jobTitle":"Bilgi İşlem Uzman Yardımcısı","email":"mailto:taneryigit.it@gmail.com","sameAs":["https://www.linkedin.com/in/taneryigit/"]}
@@ -37,7 +38,8 @@
   <header class="site-header">
     <nav class="nav-shell" aria-label="Ana navigasyon">
       <a class="brand" href="#top" aria-label="Taner Yiğit ana sayfa"><span class="brand-mark" aria-hidden="true">TY</span><span>Taner Yiğit</span></a>
-      <div class="site-nav"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#project">Aktif Projelerim</a></div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
+      <div class="site-nav" id="site-navigation"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#certificates">Sertifikalarım</a><a href="#project">Aktif Projelerim</a></div>
       <a class="nav-cta" href="#contact">İletişim <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -88,20 +90,54 @@
       </div>
     </section>
 
+    <section id="certificates" class="section certificates">
+      <div class="section-heading centered"><p class="eyebrow"><span></span> 03 · Sertifikalarım <span></span></p><h2>Öğrenmeye devam eden<br /><em>teknik birikim.</em></h2><p>Bilgi teknolojileri, işletim sistemleri ve ağ temelleri alanlarında tamamladığım eğitimler.</p></div>
+      <div class="certificate-grid">
+        <article class="certificate-card">
+          <a class="certificate-preview" href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" rel="noopener" aria-label="Bilgi Teknolojilerine Giriş sertifikasını PDF olarak görüntüle">
+            <img src="assets/certificates/bilgi-teknolojilerine-giris.png" width="1600" height="1131" loading="lazy" decoding="async" alt="Taner Yiğit adına düzenlenen Bilgi Teknolojilerine Giriş katılım sertifikası" />
+            <span>PDF’yi görüntüle <i aria-hidden="true">↗</i></span>
+          </a>
+          <div class="certificate-copy"><div><span>BTK AKADEMİ · 2026</span><h3>Bilgi Teknolojilerine Giriş</h3></div><b aria-label="Tamamlandı">01</b></div>
+        </article>
+        <article class="certificate-card">
+          <a class="certificate-preview" href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" rel="noopener" aria-label="İşletim Sistemlerine Giriş sertifikasını PDF olarak görüntüle">
+            <img src="assets/certificates/isletim-sistemlerine-giris.png" width="1600" height="1131" loading="lazy" decoding="async" alt="Taner Yiğit adına düzenlenen İşletim Sistemlerine Giriş katılım sertifikası" />
+            <span>PDF’yi görüntüle <i aria-hidden="true">↗</i></span>
+          </a>
+          <div class="certificate-copy"><div><span>BTK AKADEMİ · 2026</span><h3>İşletim Sistemlerine Giriş</h3></div><b aria-label="Tamamlandı">02</b></div>
+        </article>
+        <article class="certificate-card">
+          <a class="certificate-preview" href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" rel="noopener" aria-label="Cisco Ağ Temelleri sertifikasını PDF olarak görüntüle">
+            <object data="assets/certificates/cisco-ag-temelleri.pdf#page=1&amp;view=FitH&amp;toolbar=0&amp;navpanes=0" type="application/pdf" aria-label="Cisco Ağ Temelleri sertifikası önizlemesi"></object>
+            <span>PDF’yi görüntüle <i aria-hidden="true">↗</i></span>
+          </a>
+          <div class="certificate-copy"><div><span>CISCO · 2026</span><h3>Cisco Ağ Temelleri</h3></div><b aria-label="Tamamlandı">03</b></div>
+        </article>
+        <article class="certificate-card">
+          <a class="certificate-preview" href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" rel="noopener" aria-label="İleri Ağ Teknolojileri sertifikasını PDF olarak görüntüle">
+            <object data="assets/certificates/ileri-ag-teknolojileri.pdf#page=1&amp;view=FitH&amp;toolbar=0&amp;navpanes=0" type="application/pdf" aria-label="İleri Ağ Teknolojileri sertifikası önizlemesi"></object>
+            <span>PDF’yi görüntüle <i aria-hidden="true">↗</i></span>
+          </a>
+          <div class="certificate-copy"><div><span>BTK AKADEMİ · 2026</span><h3>İleri Ağ Teknolojileri</h3></div><b aria-label="Tamamlandı">04</b></div>
+        </article>
+      </div>
+    </section>
+
     <section id="project" class="section project-section">
-      <div class="section-heading centered"><p class="eyebrow"><span></span> 03 · Aktif Projelerim <span></span></p><h2>Fikirden çalışan ürüne<br /><em>aktif geliştirme alanı.</em></h2><p>Üretimde olan proje ve sıradaki çalışmalar için üç parçalı geliştirme vitrini.</p></div>
+      <div class="section-heading centered"><p class="eyebrow"><span></span> 04 · Aktif Projelerim <span></span></p><h2>Fikirden çalışan ürüne<br /><em>aktif geliştirme alanı.</em></h2><p>Oynanabilir iki aktif proje ve sıradaki çalışma için geliştirme vitrini.</p></div>
       <div class="project-window">
-        <div class="window-bar"><div><i></i><i></i><i></i></div><span>projects / active.builds</span><b>1 AKTİF · 2 YAKINDA</b></div>
+        <div class="window-bar"><div><i></i><i></i><i></i></div><span>projects / active.builds</span><b>2 AKTİF · 1 YAKINDA</b></div>
         <div class="project-canvas">
-          <article class="project-card project-active"><div class="project-meta"><span class="project-number">01 / GAME BUILD</span><span class="build-badge"><i></i> GELİŞTİRME AŞAMASINDA</span></div><div class="project-glyph" aria-hidden="true"><span></span><span></span><span></span></div><h3>Nita<br />Yollarda</h3><p>Oynanabilir 2D yapı; yapay zekâ destekli oyun sistemleri, etkileşim akışları ve performans optimizasyonu üzerinde aktif geliştirme sürüyor.</p><div class="project-stack"><span>2D ENGINE</span><span>AI SYSTEMS</span><span>BUILD 0.8.4</span></div><a class="button button-ghost project-link" href="http://yigittaner.online/" target="_blank" rel="noopener noreferrer" aria-label="Nita Yollarda oyununu yeni sekmede aç">Projeyi incele <span aria-hidden="true">↗</span></a></article>
-          <article class="project-card project-soon"><span class="project-number">02 / NEXT BUILD</span><div class="soon-mark" aria-hidden="true">02</div><h3>Yakında</h3><p>Yeni proje fikri, teknik kapsam ve geliştirme planı hazırlanıyor.</p><span class="soon-label">SLOT REZERVE</span></article>
+          <article class="project-card project-active project-featured"><div class="project-meta"><span class="project-number">01 / GAME BUILD</span><span class="build-badge"><i></i> GELİŞTİRME AŞAMASINDA</span></div><div class="project-glyph" aria-hidden="true"><span></span><span></span><span></span></div><h3>Nita<br />Yollarda</h3><p>Oynanabilir 2D yapı; yapay zekâ destekli oyun sistemleri, etkileşim akışları ve performans optimizasyonu üzerinde aktif geliştirme sürüyor.</p><div class="project-stack"><span>2D ENGINE</span><span>AI SYSTEMS</span><span>BUILD 0.8.4</span></div><a class="button button-ghost project-link" href="http://yigittaner.online/?game=nita-yollarda" target="_blank" rel="noopener noreferrer" aria-label="Nita Yollarda giriş ekranını yeni sekmede aç">Oyuna gir <span aria-hidden="true">↗</span></a></article>
+          <article class="project-card project-active project-gun-card"><div class="project-meta"><span class="project-number">02 / FPS BUILD</span><span class="build-badge"><i></i> ALFA SÜRÜMÜ</span></div><div class="project-glyph gun-glyph" aria-hidden="true"><span></span><span></span><span></span></div><h3>Project<br />Gun</h3><p>Babylon.js ile geliştirilen 3D FPS deneyimi; beş zombi dalgası, ganimet sistemi, farklı silah sınıfları ve tahliye döngüsü.</p><div class="project-stack"><span>3D FPS</span><span>BABYLON.JS</span><span>ALPHA</span></div><a class="button button-ghost project-link" href="http://yigittaner.online/project-gun/" target="_blank" rel="noopener noreferrer" aria-label="Project Gun oyununu yeni sekmede aç">Oyuna gir <span aria-hidden="true">↗</span></a></article>
           <article class="project-card project-soon"><span class="project-number">03 / NEXT BUILD</span><div class="soon-mark" aria-hidden="true">03</div><h3>Yakında</h3><p>Sıradaki deneysel çalışma bu alanda yayınlanacak.</p><span class="soon-label">SLOT REZERVE</span></article>
         </div>
       </div>
     </section>
 
     <section class="section experience">
-      <div class="section-heading centered"><p class="eyebrow"><span></span> 04 · Deneyim & Ödüller <span></span></p><h2>Teknik yetkinlik,<br /><em>ölçülebilir sonuçlar.</em></h2><p>Operasyonel sorumluluk, sistem sürekliliği ve yüksek hızda doğruluk odağında seçili deneyim ve başarılar.</p></div>
+      <div class="section-heading centered"><p class="eyebrow"><span></span> 05 · Deneyim & Ödüller <span></span></p><h2>Teknik yetkinlik,<br /><em>ölçülebilir sonuçlar.</em></h2><p>Operasyonel sorumluluk, sistem sürekliliği ve yüksek hızda doğruluk odağında seçili deneyim ve başarılar.</p></div>
       <div class="timeline">
         <article><div class="timeline-date"><i></i><span>2026 · DEVAM</span></div><div><p>İstanbul Nişantaşı Üniversitesi · Teknoloji Destek Hizmetleri</p><h3>Bilgi İşlem Uzman Yardımcısı</h3><small>Uç nokta ve kullanıcı desteği · Donanım/yazılım kurulumları · Ağ ve sistem olaylarının takibi · Teknik envanter ve operasyon dokümantasyonu</small></div><b>01</b></article>
         <article><div class="timeline-date"><i></i><span>HAZ 2023</span></div><div><p>10FastFingers Türkiye · Rekabetçi yazım testi</p><h3>Top 10 · Advanced Typist</h3><small>150 WPM · %99 doğruluk · Hızlı veri girişi, kısayol hâkimiyeti ve yüksek tempoda tutarlı doğruluk</small></div><b>02</b></article>
@@ -109,11 +145,11 @@
     </section>
 
     <section id="contact" class="section contact">
-      <div class="contact-glow" aria-hidden="true"></div><p class="eyebrow"><span></span> 05 · İletişim <span></span></p><h2>Birlikte daha iyi<br /><em>sistemler kuralım.</em></h2><p>Yeni projeler, iş birlikleri ve profesyonel bağlantılar için bana ulaşabilirsiniz.</p>
+      <div class="contact-glow" aria-hidden="true"></div><p class="eyebrow"><span></span> 06 · İletişim <span></span></p><h2>Birlikte daha iyi<br /><em>sistemler kuralım.</em></h2><p>Yeni projeler, iş birlikleri ve profesyonel bağlantılar için bana ulaşabilirsiniz.</p>
       <a class="contact-mail" href="mailto:taneryigit.it@gmail.com"><span>DOĞRUDAN E-POSTA</span>taneryigit.it@gmail.com</a><div class="contact-actions"><a class="button button-primary contact-email" href="mailto:taneryigit.it@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>E-posta gönder</a><a class="button button-ghost" href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9v9M6.5 6.2v.1M10.5 18v-5c0-2.2 1.4-3.5 3.3-3.5s3.2 1.2 3.2 3.5v5M10.5 10v8"/></svg>LinkedIn <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
-  <footer><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">TY</span><span>Taner Yiğit</span></a><p>© 2026 · İstanbul, TR</p><nav aria-label="Alt navigasyon"><a href="#about">Hakkımda</a><a href="#expertise">Uzmanlık</a><a href="#top">Yukarı ↑</a></nav></footer>
+  <footer><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">TY</span><span>Taner Yiğit</span></a><p>© 2026 · İstanbul, TR</p><nav aria-label="Alt navigasyon"><a href="#about">Hakkımda</a><a href="#certificates">Sertifikalarım</a><a href="#expertise">Uzmanlık</a><a href="#top">Yukarı ↑</a></nav></footer>
   <div class="custom-cursor" aria-hidden="true"><i></i></div>
   <script>
     const cursor = document.querySelector('.custom-cursor');
@@ -130,6 +166,31 @@
       });
       addEventListener('pointerleave', () => cursor.classList.remove('is-visible'));
     }
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    const closeNavigation = () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Menüyü aç');
+      document.body.classList.remove('nav-open');
+    };
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Menüyü aç' : 'Menüyü kapat');
+      document.body.classList.toggle('nav-open', !isOpen);
+    });
+    siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNavigation));
+    addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+        closeNavigation();
+        navToggle.focus();
+      }
+    });
+    addEventListener('resize', () => {
+      if (innerWidth > 700) closeNavigation();
+    });
   </script>
 </body>
 </html>
