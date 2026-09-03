@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500}h1{max-width:100%;margin:0;p
 .certificate-card{min-width:0;padding:12px;border-radius:18px;background:rgba(9,11,23,.88);box-shadow:var(--card-shadow);transition:transform .3s,background .3s}
 .certificate-card:hover{transform:translateY(-5px);background:rgba(13,16,31,.96)}
 .certificate-preview{position:relative;display:block;aspect-ratio:1600/1131;border-radius:11px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px rgba(186,215,247,.16);text-decoration:none}
-.certificate-preview img{width:100%;height:100%;display:block;object-fit:cover}
+.certificate-preview img,.certificate-preview object{width:100%;height:100%;display:block;object-fit:cover;border:0;pointer-events:none}
 .certificate-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,6,15,.72),transparent 24%);opacity:0;transition:opacity .25s}
 .certificate-preview>span{position:absolute;z-index:1;right:14px;bottom:12px;padding:8px 11px;border-radius:999px;color:var(--white);background:rgba(5,6,15,.78);box-shadow:inset 0 0 0 1px var(--edge-hot);font:500 10px var(--ui);opacity:0;transform:translateY(5px);transition:opacity .25s,transform .25s}
 .certificate-preview>span i{margin-left:6px;font-style:normal}
