@@ -6,7 +6,7 @@
   const toggle = document.querySelector('.nav-toggle');
   const links = [...navigation.querySelectorAll('a[href^="#"]')];
   const sections = [...document.querySelectorAll('[data-section]')];
-  const mobile = matchMedia('(max-width: 979px)');
+  const mobile = matchMedia('(max-width: 1099px)');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
   function setMenu(open, restoreFocus = false) {
@@ -147,8 +147,11 @@
       try {
         await navigator.clipboard.writeText(email);
         icon.setAttribute('href', '#i-check');
-        status.textContent = 'E-posta adresi kopyalandı.';
-        resetTimer = setTimeout(() => icon.setAttribute('href', '#i-copy'), 2500);
+        status.textContent = 'E-posta kopyalandı';
+        resetTimer = setTimeout(() => {
+          icon.setAttribute('href', '#i-copy');
+          status.textContent = '';
+        }, 1800);
       } catch {
         status.textContent = 'Kopyalanamadı. E-posta adresini seçerek kopyalayabilirsiniz.';
       } finally {
