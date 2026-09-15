@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taner Yiğit | IT Operations & Systems</title>
-    <meta name="description" content="Bilgi İşlem Uzman Yardımcısı. Sistem, ağ altyapısı ve IT operasyonları." />
+    <title>Taner Yiğit | BT Operasyonları ve Sistem</title>
+    <meta name="description" content="BT Operasyon Uzmanı. Sistem, ağ altyapısı ve BT operasyonları." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +30,20 @@
                     },
                     animation: {
                         'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
                     }
                 }
             }
@@ -41,15 +56,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-background text-slate-300 antialiased selection:bg-accent/30 selection:text-white">
+<body class="bg-background text-slate-300 antialiased selection:bg-accent/30 selection:text-white overflow-x-hidden">
     
-    <!-- Background Gradient -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-800/20 via-background to-background"></div>
+    <!-- Animated Background -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-background">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        <!-- Noise Overlay -->
+        <div class="absolute inset-0 opacity-[0.015]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+    </div>
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 glass border-b-0 border-white/5 bg-background/50 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-white font-mono font-bold tracking-tight text-lg">TY<span class="text-accent">_</span></a>
+            <a href="#" class="text-white font-mono font-bold tracking-tight text-lg hover:text-accent transition-colors">TY<span class="text-accent">_</span></a>
             
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20">
@@ -57,7 +78,7 @@
                         <span class="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                     </span>
-                    <span class="text-xs font-medium text-accent tracking-wide uppercase">System Online</span>
+                    <span class="text-xs font-medium text-accent tracking-wide uppercase">Sistem Aktif</span>
                 </div>
             </div>
         </div>
@@ -67,54 +88,58 @@
         
         <!-- Hero Section -->
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 fade-up">
-            <div class="space-y-8">
-                <div class="space-y-4">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight blur-in">
-                        Taner <span class="text-slate-500">Yiğit</span>
-                    </h1>
-                    <h2 class="text-xl sm:text-2xl font-medium text-slate-400 font-mono blur-in" style="animation-delay: 100ms;">
-                        <span class="text-accent">></span> IT Operations Specialist
-                    </h2>
+            <div class="space-y-8 relative z-10">
+                <div class="flex items-center gap-6 blur-in">
+                    <img src="assets/taner-yigit.jpg" alt="Taner Yiğit" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-2 border-white/10 shadow-[0_0_30px_rgba(16,185,129,0.2)] object-cover animate-float" />
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+                            Taner <span class="text-slate-500">Yiğit</span>
+                        </h1>
+                        <h2 class="text-lg sm:text-xl font-medium text-slate-400 font-mono mt-2">
+                            <span class="text-accent">></span> BT Operasyon Uzmanı
+                        </h2>
+                    </div>
                 </div>
                 
                 <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl blur-in" style="animation-delay: 200ms;">
-                    İstanbul Nişantaşı Üniversitesi'nde Bilgi İşlem Uzman Yardımcısı. Günlük operasyonda uç nokta sistemleri, donanım altyapısı ve ağ operasyonları yürütüyor; arka planda CCNA ve homelab mimarileri üzerine çalışıyorum.
+                    İstanbul Nişantaşı Üniversitesi'nde Bilgi İşlem Uzman Yardımcısı. Günlük operasyonda uç nokta sistemleri, donanım altyapısı ve ağ operasyonları yürütüyor; arka planda CCNA ve ev laboratuvarı (homelab) mimarileri üzerine çalışıyorum.
                 </p>
                 
                 <div class="flex flex-wrap gap-4 pt-2 blur-in" style="animation-delay: 300ms;">
-                    <a href="assets/taner-yigit-cv.pdf" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-background font-medium rounded-lg hover:bg-slate-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    <!-- Fixed CV link to open in new tab or download, and contact to anchor -->
+                    <a href="assets/taner-yigit-cv.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-background font-medium rounded-lg hover:bg-slate-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:-translate-y-1">
                         <i data-lucide="download" class="w-4 h-4"></i> CV İndir
                     </a>
-                    <a href="mailto:iletisim@yigittaner.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 glass glass-hover text-white font-medium rounded-lg transition-all group border border-white/10 hover:border-white/20">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3 glass glass-hover text-white font-medium rounded-lg transition-all group border border-white/10 hover:border-white/30 hover:-translate-y-1">
                         <i data-lucide="mail" class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors"></i> İletişim
                     </a>
                 </div>
             </div>
             
             <!-- Terminal Mockup -->
-            <div class="glass rounded-xl overflow-hidden shadow-2xl border border-white/10 group blur-in" style="animation-delay: 400ms;">
-                <div class="bg-surface/80 border-b border-white/5 px-4 py-3 flex items-center gap-2">
+            <div class="glass rounded-xl overflow-hidden shadow-2xl border border-white/10 group blur-in relative z-10 hover:-translate-y-2 transition-transform duration-500" style="animation-delay: 400ms;">
+                <div class="bg-surface/90 border-b border-white/5 px-4 py-3 flex items-center gap-2">
                     <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                     <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                     <div class="w-3 h-3 rounded-full bg-accent/80"></div>
-                    <div class="ml-4 text-xs font-mono text-slate-500">admin@ty-sys: ~</div>
+                    <div class="ml-4 text-xs font-mono text-slate-500">admin@ty-sistem: ~</div>
                 </div>
                 <div class="p-6 font-mono text-sm leading-relaxed overflow-x-auto">
-                    <div class="text-slate-400"><span class="text-accent">admin@ty-sys:~$</span> systeminfo --status</div>
+                    <div class="text-slate-400"><span class="text-accent">admin@ty-sistem:~$</span> systeminfo --status</div>
                     <div class="text-slate-300 mt-2">
-                        [OK] Endpoint Management: Active<br>
-                        [OK] Network Infrastructure: Stable<br>
-                        [OK] Active Directory: Synced<br>
-                        [..] CCNA Certification: In Progress<br>
+                        [OK] Uç Nokta Yönetimi: Aktif<br>
+                        [OK] Ağ Altyapısı: Stabil<br>
+                        [OK] Active Directory: Senkronize<br>
+                        [..] CCNA Sertifikası: Devam Ediyor<br>
                     </div>
-                    <div class="text-slate-400 mt-4"><span class="text-accent">admin@ty-sys:~$</span> ping -c 3 homelab.local</div>
-                    <div class="text-slate-300 mt-1">
-                        PING homelab.local (192.168.1.100): 56 data bytes<br>
+                    <div class="text-slate-400 mt-4"><span class="text-accent">admin@ty-sistem:~$</span> ping -c 3 homelab.yerel</div>
+                    <div class="text-slate-300 mt-1 opacity-80">
+                        PING homelab.yerel (192.168.1.100): 56 data bytes<br>
                         64 bytes from 192.168.1.100: icmp_seq=0 ttl=64 time=0.231 ms<br>
                         64 bytes from 192.168.1.100: icmp_seq=1 ttl=64 time=0.185 ms<br>
                         64 bytes from 192.168.1.100: icmp_seq=2 ttl=64 time=0.201 ms<br>
                     </div>
-                    <div class="text-slate-400 mt-4 flex items-center"><span class="text-accent">admin@ty-sys:~$</span> <span class="w-2 h-4 bg-slate-400 animate-pulse ml-2 inline-block"></span></div>
+                    <div class="text-slate-400 mt-4 flex items-center"><span class="text-accent">admin@ty-sistem:~$</span> <span class="w-2 h-4 bg-slate-400 animate-pulse ml-2 inline-block"></span></div>
                 </div>
             </div>
         </section>
@@ -127,7 +152,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Network -->
-                <div class="bento-card glass rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
+                <div class="bento-card glass rounded-2xl p-8 hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
                             <i data-lucide="network" class="w-6 h-6 text-blue-400"></i>
@@ -136,15 +161,15 @@
                         <p class="text-slate-400 text-sm mb-6">Ağ mimarileri, cihaz yapılandırmaları ve trafik analizi üzerine güncel çalışmalar.</p>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">CCNA (Hazırlık)</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">Switching</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">VLAN</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">TCP/IP</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">CCNA (Hazırlık)</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Switching</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">VLAN</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">TCP/IP</span>
                     </div>
                 </div>
                 
                 <!-- System -->
-                <div class="bento-card glass rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
+                <div class="bento-card glass rounded-2xl p-8 hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
                             <i data-lucide="server" class="w-6 h-6 text-accent"></i>
@@ -153,31 +178,31 @@
                         <p class="text-slate-400 text-sm mb-6">Son kullanıcı donanımları, merkezi yönetim ve işletim sistemi operasyonları.</p>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">Windows Client</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">Active Directory</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">MDM</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">Hardware</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Windows İstemci</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Active Directory</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">MDM</span>
+                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Donanım</span>
                     </div>
                 </div>
 
                 <!-- Code / Scripting & Extra (Split Column) -->
                 <div class="grid grid-rows-2 gap-6">
-                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-500">
                         <div class="flex items-center gap-4 mb-4">
                              <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
                                 <i data-lucide="code" class="w-5 h-5 text-purple-400"></i>
                             </div>
-                            <h4 class="font-bold text-white">Kodlama & Scripting</h4>
+                            <h4 class="font-bold text-white">Kodlama</h4>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">JavaScript</span>
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">Babylon.js</span>
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10">HTML/CSS</span>
+                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">JavaScript</span>
+                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">Babylon.js</span>
+                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">HTML/CSS</span>
                         </div>
                     </div>
                     
-                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden group">
-                        <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group">
+                        <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
                             <i data-lucide="keyboard" class="w-32 h-32"></i>
                         </div>
                         <div class="flex flex-col h-full justify-center relative z-10">
@@ -198,43 +223,25 @@
             <div class="relative pl-8 md:pl-0">
                 <!-- Line -->
                 <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-white/5">
-                    <div class="absolute top-0 h-1/2 w-full bg-gradient-to-b from-accent/80 to-transparent shadow-[0_0_15px_rgba(16,185,129,0.3)]"></div>
+                    <div class="absolute top-0 h-full w-full bg-gradient-to-b from-accent/80 to-transparent shadow-[0_0_15px_rgba(16,185,129,0.3)]"></div>
                 </div>
                 <div class="md:hidden timeline-line"></div>
 
                 <div class="space-y-12">
-                    <!-- Item 1 -->
+                    <!-- Item 1 (Only this one now) -->
                     <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center group">
-                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0">
+                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0 transform transition-transform group-hover:-translate-x-2">
                             <h4 class="text-lg font-bold text-white">Bilgi İşlem Uzman Yardımcısı</h4>
                             <p class="text-accent font-medium text-sm mt-1">İstanbul Nişantaşı Üniversitesi</p>
-                            <p class="text-slate-500 text-xs font-mono mt-2">Haz 2023 - Günümüz</p>
+                            <p class="text-slate-500 text-xs font-mono mt-2">2026 - Devam Ediyor</p>
                         </div>
                         
                         <!-- Node -->
-                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-accent shadow-[0_0_10px_rgba(16,185,129,0.5)] z-10 mt-1 md:mt-0"></div>
+                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-accent shadow-[0_0_15px_rgba(16,185,129,0.6)] z-10 mt-1 md:mt-0 transition-transform group-hover:scale-125"></div>
                         
-                        <div class="md:w-[45%] md:pl-12">
-                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/10 transition-colors">
-                                Kampüs içi son kullanıcı desteği, donanım arıza tespiti ve ağ altyapı cihazlarının fiziksel ve yazılımsal operasyonlarında aktif rol.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center group">
-                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0">
-                            <h4 class="text-lg font-bold text-white">Bilgi İşlem Stajyeri</h4>
-                            <p class="text-slate-300 font-medium text-sm mt-1">İstanbul Nişantaşı Üniversitesi</p>
-                            <p class="text-slate-500 text-xs font-mono mt-2">Şub 2023 - Haz 2023</p>
-                        </div>
-                        
-                        <!-- Node -->
-                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-slate-600 z-10 mt-1 md:mt-0"></div>
-                        
-                        <div class="md:w-[45%] md:pl-12">
-                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/10 transition-colors">
-                                BT süreçlerine giriş, sistem kurulumları, temel seviye ağ desteği ve yardım masası kayıt yönetimi.
+                        <div class="md:w-[45%] md:pl-12 transform transition-transform group-hover:translate-x-2">
+                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shadow-lg">
+                                Kampüs içi son kullanıcı desteği, donanım arıza tespiti ve ağ altyapı cihazlarının fiziksel ve yazılımsal operasyonlarında aktif rol alıyorum.
                             </p>
                         </div>
                     </div>
@@ -250,41 +257,61 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Project 1 -->
-                <div class="glass border border-white/5 hover:border-white/10 rounded-2xl p-6 transition-all group flex flex-col hover:-translate-y-1 duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center border border-white/5">
-                            <i data-lucide="globe" class="w-5 h-5 text-slate-300"></i>
-                        </div>
-                        <a href="https://github.com/taneryigitxl/Website" target="_blank" class="p-2 text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="github" class="w-5 h-5"></i>
-                        </a>
+                <!-- Project 1: Nita Yollarda -->
+                <div class="glass border border-white/5 hover:border-white/20 rounded-2xl overflow-hidden transition-all duration-500 group flex flex-col hover:-translate-y-2 shadow-lg">
+                    <div class="h-48 w-full bg-surface relative overflow-hidden">
+                        <!-- Generic placeholder image for game -->
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop" alt="Nita Yollarda" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                     </div>
-                    <h4 class="text-lg font-bold text-white mb-2">Kişisel Portfolyo</h4>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow">Modern, minimalist ve sistem yöneticisi estetiğiyle tasarlanmış, tamamen responsive portfolyo sitesi.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">HTML/CSS</span>
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Tailwind</span>
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">JavaScript</span>
+                    <div class="p-6 flex flex-col flex-grow -mt-12 relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-background flex items-center justify-center border border-white/10 shadow-lg">
+                                <i data-lucide="gamepad-2" class="w-5 h-5 text-accent"></i>
+                            </div>
+                            <div class="flex gap-2 bg-background/80 backdrop-blur-sm rounded-lg p-1 border border-white/10">
+                                <a href="http://yigittaner.online/nita-yollarda/" target="_blank" class="p-2 text-slate-400 hover:text-accent transition-colors" title="Canlı Demo">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Nita Yollarda</h4>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow">Web tabanlı interaktif oyun projesi. Kullanıcı etkileşimleri ve oyun mekanikleri barındırır.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Oyun Geliştirme</span>
+                            <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass border border-white/5 hover:border-white/10 rounded-2xl p-6 transition-all group flex flex-col hover:-translate-y-1 duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center border border-white/5">
-                            <i data-lucide="server-cog" class="w-5 h-5 text-slate-300"></i>
-                        </div>
-                        <a href="https://github.com/taneryigitxl" target="_blank" class="p-2 text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="github" class="w-5 h-5"></i>
-                        </a>
+                <!-- Project 2: Project Gun -->
+                <div class="glass border border-white/5 hover:border-white/20 rounded-2xl overflow-hidden transition-all duration-500 group flex flex-col hover:-translate-y-2 shadow-lg">
+                    <div class="h-48 w-full bg-surface relative overflow-hidden">
+                        <!-- Generic placeholder image for FPS game -->
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop" alt="Project Gun" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                     </div>
-                    <h4 class="text-lg font-bold text-white mb-2">Homelab Network Topology</h4>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow">Packet Tracer ve sanal ortamda yapılandırılmış, VLAN ve routing protokollerini barındıran simüle laboratuvar.</p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Cisco IOS</span>
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Routing</span>
-                        <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Packet Tracer</span>
+                    <div class="p-6 flex flex-col flex-grow -mt-12 relative z-10">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-background flex items-center justify-center border border-white/10 shadow-lg">
+                                <i data-lucide="crosshair" class="w-5 h-5 text-accent"></i>
+                            </div>
+                            <div class="flex gap-2 bg-background/80 backdrop-blur-sm rounded-lg p-1 border border-white/10">
+                                <a href="http://yigittaner.online/project-gun/" target="_blank" class="p-2 text-slate-400 hover:text-accent transition-colors" title="Canlı Demo">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/taneryigitxl/proje1/tree/main/project-gun" target="_blank" class="p-2 text-slate-400 hover:text-white transition-colors" title="GitHub">
+                                    <i data-lucide="github" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Project Gun</h4>
+                        <p class="text-slate-400 text-sm mb-6 flex-grow">Babylon.js ile geliştirilen tarayıcı tabanlı 3D FPS deneyimi. Zombi dalgası ve ganimet sistemi içerir.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">Babylon.js</span>
+                            <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">3D</span>
+                            <span class="px-2 py-1 text-[10px] font-mono text-slate-300 bg-surface border border-white/5 rounded">JavaScript</span>
+                        </div>
                     </div>
                 </div>
 
@@ -292,39 +319,106 @@
         </section>
 
         <!-- Sertifikalar -->
-        <section class="fade-up">
+        <section class="fade-up mb-32">
              <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                 <i data-lucide="award" class="w-6 h-6 text-accent"></i> Sertifikalar
             </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" class="glass glass-hover p-4 rounded-xl flex items-center gap-3 group border border-white/5 hover:border-white/10">
-                    <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
-                    <span class="text-sm font-medium text-slate-300">Bilgi Teknolojilerine Giriş</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" class="glass glass-hover p-5 rounded-xl flex flex-col gap-2 group border border-white/5 hover:border-white/20 transition-all hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
+                        <span class="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider">BTK Akademi</span>
+                    </div>
+                    <span class="text-base font-medium text-white group-hover:text-accent transition-colors">Bilgi Teknolojilerine Giriş</span>
+                    <span class="text-xs text-slate-400 mt-auto flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> Belgeyi Görüntüle</span>
                 </a>
-                <a href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" class="glass glass-hover p-4 rounded-xl flex items-center gap-3 group border border-white/5 hover:border-white/10">
-                    <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
-                    <span class="text-sm font-medium text-slate-300">İşletim Sistemlerine Giriş</span>
+                <a href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" class="glass glass-hover p-5 rounded-xl flex flex-col gap-2 group border border-white/5 hover:border-white/20 transition-all hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
+                        <span class="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider">BTK Akademi</span>
+                    </div>
+                    <span class="text-base font-medium text-white group-hover:text-accent transition-colors">İşletim Sistemlerine Giriş</span>
+                    <span class="text-xs text-slate-400 mt-auto flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> Belgeyi Görüntüle</span>
                 </a>
-                <a href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" class="glass glass-hover p-4 rounded-xl flex items-center gap-3 group border border-white/5 hover:border-white/10">
-                    <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
-                    <span class="text-sm font-medium text-slate-300">Cisco Ağ Temelleri</span>
+                <a href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" class="glass glass-hover p-5 rounded-xl flex flex-col gap-2 group border border-white/5 hover:border-white/20 transition-all hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
+                        <span class="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider">BTK Akademi</span>
+                    </div>
+                    <span class="text-base font-medium text-white group-hover:text-accent transition-colors">Ağ Temelleri</span>
+                    <span class="text-xs text-slate-400 mt-auto flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> Belgeyi Görüntüle</span>
                 </a>
-                <a href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" class="glass glass-hover p-4 rounded-xl flex items-center gap-3 group border border-white/5 hover:border-white/10">
-                    <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
-                    <span class="text-sm font-medium text-slate-300">İleri Ağ Teknolojileri</span>
+                <a href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" class="glass glass-hover p-5 rounded-xl flex flex-col gap-2 group border border-white/5 hover:border-white/20 transition-all hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="file-badge" class="w-5 h-5 text-slate-400 group-hover:text-accent transition-colors"></i>
+                        <span class="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider">BTK Akademi</span>
+                    </div>
+                    <span class="text-base font-medium text-white group-hover:text-accent transition-colors">İleri Ağ Teknolojileri</span>
+                    <span class="text-xs text-slate-400 mt-auto flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> Belgeyi Görüntüle</span>
                 </a>
+            </div>
+        </section>
+
+        <!-- İletişim (Modernized from old version) -->
+        <section id="contact" class="fade-up pt-12 border-t border-white/5 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">İletişim</h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed text-lg">BT fırsatları, projeler ve profesyonel iş birlikleri için tanışalım. Bir e-posta kadar yakınım.</p>
+                    <a href="mailto:taneryigit.it@gmail.com" class="inline-flex items-center gap-3 px-8 py-4 bg-accent text-background font-bold rounded-xl hover:bg-accent/90 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:-translate-y-1">
+                        Birlikte konuşalım <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                
+                <div class="space-y-4">
+                    <a href="mailto:taneryigit.it@gmail.com" class="glass glass-hover p-6 rounded-2xl flex items-center gap-6 group border border-white/5 hover:border-white/20 transition-all hover:-translate-x-2">
+                        <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:border-accent transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6 text-accent group-hover:text-background transition-colors"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-mono font-bold text-slate-500 mb-1">E-POSTA</span>
+                            <span class="block text-white font-medium text-lg">taneryigit.it@gmail.com</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/taneryigit/" target="_blank" class="glass glass-hover p-6 rounded-2xl flex justify-between items-center group border border-white/5 hover:border-white/20 transition-all hover:-translate-x-2">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full bg-[#0A66C2]/10 flex items-center justify-center border border-[#0A66C2]/20 group-hover:bg-[#0A66C2] group-hover:border-[#0A66C2] transition-colors">
+                                <i data-lucide="linkedin" class="w-6 h-6 text-[#0A66C2] group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-mono font-bold text-slate-500 mb-1">LINKEDIN</span>
+                                <span class="block text-white font-medium text-lg">Profesyonel bağlantı kuralım</span>
+                            </div>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 text-slate-600 group-hover:text-white transition-colors"></i>
+                    </a>
+                    
+                    <a href="https://github.com/taneryigitxl" target="_blank" class="glass glass-hover p-6 rounded-2xl flex justify-between items-center group border border-white/5 hover:border-white/20 transition-all hover:-translate-x-2">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full bg-slate-700/30 flex items-center justify-center border border-slate-600/50 group-hover:bg-white group-hover:border-white transition-colors">
+                                <i data-lucide="github" class="w-6 h-6 text-slate-300 group-hover:text-background transition-colors"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-mono font-bold text-slate-500 mb-1">GITHUB</span>
+                                <span class="block text-white font-medium text-lg">Kodlarımı keşfedin</span>
+                            </div>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 text-slate-600 group-hover:text-white transition-colors"></i>
+                    </a>
+                </div>
             </div>
         </section>
         
     </main>
 
-    <footer class="border-t border-white/5 py-8 mt-12 bg-background">
+    <footer class="border-t border-white/5 py-8 mt-12 bg-background relative z-10">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-slate-500 text-sm font-mono">© 2026 Taner Yiğit. All systems operational.</p>
-            <div class="flex items-center gap-4 text-slate-500">
-                <a href="https://github.com/taneryigitxl" class="hover:text-white transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
-                <a href="https://www.linkedin.com/in/taner-yigit/" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            </div>
+            <a href="#" class="text-slate-400 font-mono font-bold hover:text-white transition-colors">TY<span class="text-accent">.</span> taner yiğit<span class="text-accent">.</span></a>
+            <p class="text-slate-500 text-sm font-mono">© 2026 Taner Yiğit.</p>
+            <a href="#" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">Başa dön <i data-lucide="arrow-up" class="w-4 h-4"></i></a>
         </div>
     </footer>
 
@@ -355,6 +449,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Stop observing once animated in
                     observer.unobserve(entry.target);
                 }
             });

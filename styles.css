@@ -109,3 +109,6 @@ body {
   background: linear-gradient(to bottom, rgba(16, 185, 129, 0.8), transparent);
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
+
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
