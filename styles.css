@@ -619,3 +619,14 @@ h2 > span { color: #8a97ac; }
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: none; }
 }
+.mouse-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(88, 143, 244, 0.035) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
