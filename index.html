@@ -145,16 +145,29 @@
         <!-- Hero Section -->
         <section id="hakkimda" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 fade-up">
             <div class="space-y-8 relative z-10">
-                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 blur-in">
-                    <!-- Photo centering fix -->
-                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 shrink-0">
-                        <img src="assets/taner-yigit.jpg" alt="Taner Yiğit" width="160" height="160" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover object-[60%_15%] rounded-full border-2 border-white/10 shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-float bg-[#f4f4f5]" />
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 sm:gap-8 blur-in">
+                    <!-- Profil Fotoğrafı Kapsayıcısı -->
+                    <div class="relative w-36 h-36 sm:w-40 sm:h-40 shrink-0 flex items-center justify-center">
+                        <!-- Arka plan parlama halkası (Glow) -->
+                        <div class="absolute inset-0 rounded-full bg-accent/20 blur-xl"></div>
+                        
+                        <!-- Görsel: object-center ile tam ortalı, zoom kayması olmadan -->
+                        <img 
+                            src="assets/taner-yigit.jpg" 
+                            alt="Taner Yiğit" 
+                            width="160" 
+                            height="160"
+                            fetchpriority="high"
+                            class="relative w-full h-full object-cover object-center rounded-full border-2 border-white/15 shadow-2xl animate-float bg-surface" 
+                        />
                     </div>
-                    <div class="mt-2 sm:mt-4">
+
+                    <!-- Başlık ve Unvan -->
+                    <div class="flex flex-col justify-center">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
                             Taner <span class="text-slate-500">Yiğit</span>
                         </h1>
-                        <h2 class="text-lg sm:text-xl font-medium text-slate-400 font-mono mt-2">
+                        <h2 class="text-lg sm:text-xl font-medium text-slate-400 font-mono mt-2 flex items-center justify-center sm:justify-start gap-1.5">
                             <span class="text-accent">></span> BT Operasyon Uzmanı
                         </h2>
                     </div>
