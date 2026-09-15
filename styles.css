@@ -133,3 +133,27 @@ body {
 
 .animation-delay-2000 { animation-delay: 2s; }
 .animation-delay-4000 { animation-delay: 4s; }
+
+/* ─── prefers-reduced-motion: disable heavy animations ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .blur-in,
+  .animate-float,
+  .fade-up {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+  .animate-pulse,
+  .animate-ping-slow {
+    animation: none !important;
+  }
+}
+
+/* ─── Safari glassmorphism overflow fix ──────────────────────────────────── */
+/* Prevent backdrop-filter from bleeding outside rounded containers on Safari */
+.glass {
+  -webkit-transform: translateZ(0); /* force GPU layer */
+  isolation: isolate;               /* stacking context */
+}
