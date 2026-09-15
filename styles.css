@@ -572,3 +572,50 @@ h2 > span { color: #8a97ac; }
   .reveal-pending, .reveal-visible { opacity: 1; transform: none; }
   .contact-channel strong, .employer h3, .project-copy h3, .about-copy > .large-copy { color: #222; }
 }
+.simple-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.simple-skill {
+  padding: 25px;
+  border: 1px solid #26303f;
+  border-radius: 8px;
+  background: #10161f;
+  transition: transform .25s, border-color .25s;
+}
+.simple-skill:hover {
+  transform: translateY(-4px);
+  border-color: #466594;
+}
+.simple-skill h3 {
+  margin: 15px 0 8px;
+  font-size: 16px;
+  color: #e5ebf4;
+}
+.simple-skill p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.project-thumbnail {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #2a364a;
+}
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.project-card:hover .project-thumbnail img {
+  transform: scale(1.05);
+}
+.fade-in-on-load {
+  animation: page-fade-in 1.2s ease-out forwards;
+}
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
