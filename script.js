@@ -167,3 +167,41 @@
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
   });
+// Aceternity 3D Card Effect
+document.addEventListener('DOMContentLoaded', () => {
+  const containers = document.querySelectorAll('.aceternity-container');
+  containers.forEach(container => {
+    const card = container.querySelector('.aceternity-card');
+    if (!card) return;
+
+    let isMouseEntered = false;
+
+    container.addEventListener('mouseenter', () => {
+      isMouseEntered = true;
+      card.style.transition = 'none';
+      const innerItems = card.querySelectorAll('.aceternity-item');
+      innerItems.forEach(item => {
+        const translateZ = item.getAttribute('data-translate-z') || '50px';
+        item.style.transform = \	ranslateZ(\)\;
+      });
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isMouseEntered) return;
+      const { left, top, width, height } = container.getBoundingClientRect();
+      const x = (e.clientX - left - width / 2) / 25;
+      const y = (e.clientY - top - height / 2) / 25;
+      card.style.transform = \otateY(\deg) rotateX(\deg)\;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isMouseEntered = false;
+      card.style.transition = 'all 0.5s ease';
+      card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      const innerItems = card.querySelectorAll('.aceternity-item');
+      innerItems.forEach(item => {
+        item.style.transform = 'translateZ(0px)';
+      });
+    });
+  });
+});
