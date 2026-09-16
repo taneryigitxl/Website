@@ -958,5 +958,65 @@
         animationFrameId = requestAnimationFrame(drawPlexus);
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/g5368cx7NHz5mOuzfO8j+uN03Oq1i2t0n40EwLzJq3i+v1TfK+K+jN/P16R+p4Yc2p5ZtA1/2p9K0s/oO+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Aceternity 3D Card Logic -->
+    <script>
+        (function() {
+            function initAceternity() {
+                const containers = document.querySelectorAll('.aceternity-container');
+                containers.forEach(container => {
+                    const card = container.querySelector('.aceternity-card');
+                    if (!card) return;
+                    
+                    const innerItems = card.querySelectorAll('.aceternity-item');
+                    
+                    // Set smooth transition for return
+                    card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                    innerItems.forEach(item => {
+                        item.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                    });
+
+                    container.addEventListener('mousemove', (e) => {
+                        const rect = container.getBoundingClientRect();
+                        
+                        // Center is 0,0
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        
+                        // Rotate based on distance (divide by constant to dampen)
+                        const rotateX = -y / 10;
+                        const rotateY = x / 10;
+                        
+                        // Snap immediately to cursor
+                        card.style.transition = 'none';
+                        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                        
+                        // Pop out Z elements
+                        innerItems.forEach(item => {
+                            const tz = item.getAttribute('data-translate-z') || '50px';
+                            item.style.transition = 'none';
+                            item.style.transform = `translateZ(${tz})`;
+                        });
+                    });
+
+                    container.addEventListener('mouseleave', () => {
+                        // Return to zero
+                        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                        
+                        innerItems.forEach(item => {
+                            item.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                            item.style.transform = 'translateZ(0px)';
+                        });
+                    });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initAceternity);
+            } else {
+                initAceternity();
+            }
+        })();
+    </script>
 </body>
 </html>
