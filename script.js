@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const innerItems = card.querySelectorAll('.aceternity-item');
       innerItems.forEach(item => {
         const translateZ = item.getAttribute('data-translate-z') || '50px';
-        item.style.transform = \	ranslateZ(\)\;
+        item.style.transform = `translateZ(${translateZ})`;
       });
     });
 
@@ -191,12 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const { left, top, width, height } = container.getBoundingClientRect();
       const x = (e.clientX - left - width / 2) / 25;
       const y = (e.clientY - top - height / 2) / 25;
-      card.style.transform = \otateY(\deg) rotateX(\deg)\;
+      card.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
     });
 
     container.addEventListener('mouseleave', () => {
       isMouseEntered = false;
-      card.style.transition = 'all 0.5s ease';
+      card.style.transition = 'transform 0.5s ease';
       card.style.transform = 'rotateY(0deg) rotateX(0deg)';
       const innerItems = card.querySelectorAll('.aceternity-item');
       innerItems.forEach(item => {

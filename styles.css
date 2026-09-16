@@ -154,6 +154,4 @@ body {
 /* ─── Safari glassmorphism overflow fix ──────────────────────────────────── */
 /* Prevent backdrop-filter from bleeding outside rounded containers on Safari */
 .glass {
-  -webkit-transform: translateZ(0); /* force GPU layer */
-  isolation: isolate;               /* stacking context */
 }
