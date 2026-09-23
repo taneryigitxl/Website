@@ -1,525 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Taner Yiğit Özgeçmişi - Bilgi İşlem Uzmanı / IT Destek Uzmanı. Deneyim, yetkinlikler, projeler ve sertifikalar." />
-  <meta name="theme-color" content="#0a101a" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="description" content="Taner Yiğit özgeçmişi" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Taner Yiğit | Özgeçmiş" />
-  <meta property="og:description" content="Bilgi İşlem ve IT Destek Uzmanı profesyonel özgeçmişi." />
+  <meta property="og:description" content="Taner Yiğit güncel özgeçmişi" />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://www.yigittaner.com/cv.html" />
-  <meta property="og:locale" content="tr_TR" />
   <link rel="canonical" href="https://www.yigittaner.com/cv.html" />
-  <link rel="icon" href="assets/favicon-v2.svg" type="image/svg+xml" />
   <title>Taner Yiğit | Özgeçmiş (CV)</title>
   <style>
-    :root {
-      color-scheme: light;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #1e293b;
-      background: #0b0f17;
+    * {
+      box-sizing: border-box;
     }
-    * { box-sizing: border-box; }
+
+    html,
     body {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.5;
-      background-color: #0b0f17;
-    }
-    a {
-      color: #0284c7;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .toolbar {
-      max-width: 210mm;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .toolbar-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .toolbar a.back-link {
-      color: #94a3b8;
-      font-weight: 500;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .toolbar a.back-link:hover {
-      color: #10b981;
-    }
-    .toolbar-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .btn-action {
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
-      padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.06);
-      color: #f8fafc;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .btn-action:hover {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: #10b981;
-      color: #10b981;
-      text-decoration: none;
-    }
-    .btn-primary {
-      background: #10b981;
-      color: #0b0f17;
-      border-color: #10b981;
-    }
-    .btn-primary:hover {
-      background: #34d399;
-      color: #0b0f17;
-    }
-
-    /* A4 Sheet */
-    .sheet {
-      max-width: 210mm;
-      margin: 0 auto 50px;
-      padding: 14mm 16mm;
-      background: #ffffff;
-      color: #1e293b;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      border-radius: 4px;
-    }
-
-    /* Header */
-    .identity {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      padding-bottom: 14px;
-      border-bottom: 2px solid #0f172a;
-    }
-    .identity-text {
-      flex: 1;
-    }
-    h1 {
-      margin: 0;
-      color: #0f172a;
-      font-size: 28px;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      font-weight: 800;
-    }
-    .role {
-      margin: 4px 0 8px;
-      color: #0369a1;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 14px;
-      margin: 0;
-      font-size: 11.5px;
-      color: #475467;
-    }
-    .contact-info a {
-      color: #334155;
-    }
-    .contact-info a:hover {
-      color: #0369a1;
-    }
-    .photo-container {
-      width: 78px;
-      height: 98px;
-      flex-shrink: 0;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid #cbd5e1;
-      background: #f1f5f9;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-    .photo-container img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: 60% 15%;
+      margin: 0;
+      background: #0b1120;
+    }
+
+    .cv-viewer {
       display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
-    /* Sections */
-    section {
-      margin-top: 14px;
-    }
-    h2 {
-      margin: 0 0 6px;
-      color: #0f172a;
-      font-size: 11.5px;
-      line-height: 1.3;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 800;
-      border-bottom: 1px solid #e2e8f0;
-      padding-bottom: 3px;
-    }
-    p {
-      margin: 4px 0 0;
-      color: #334155;
-      font-size: 11.5px;
-      line-height: 1.45;
-    }
-
-    /* Entry styles */
-    .entry {
-      margin-top: 6px;
-    }
-    .entry + .entry {
-      margin-top: 10px;
-    }
-    .entry-heading {
+    .pdf-fallback {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-    }
-    .entry-title {
-      font-weight: 700;
-      font-size: 12.5px;
-      color: #0f172a;
-    }
-    .entry-subtitle {
-      font-weight: 600;
-      color: #0369a1;
-      font-size: 12px;
-    }
-    .date {
-      flex-shrink: 0;
-      color: #64748b;
-      font-size: 11px;
-      font-weight: 500;
-    }
-    ul {
-      margin: 4px 0 0;
-      padding-left: 16px;
-    }
-    li {
-      margin-top: 2px;
-      font-size: 11px;
-      color: #334155;
-      line-height: 1.4;
+      width: 100%;
+      min-height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #e2e8f0;
+      font: 500 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-align: center;
     }
 
-    /* Technical Skills Table */
-    .skills-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 5px;
-    }
-    .skill-row {
-      display: flex;
-      gap: 10px;
-      font-size: 11px;
-      line-height: 1.4;
-    }
-    .skill-label {
-      width: 140px;
-      flex-shrink: 0;
-      font-weight: 700;
-      color: #0f172a;
-    }
-    .skill-value {
-      flex: 1;
-      color: #334155;
-    }
-
-    /* Projects & Details */
-    .project-item {
-      margin-top: 6px;
-    }
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .project-name {
-      font-weight: 700;
-      font-size: 11.5px;
-      color: #0f172a;
-    }
-    .project-link {
-      font-size: 10.5px;
-      color: #0369a1;
-      font-family: monospace;
-    }
-    .project-desc {
-      font-size: 11px;
-      color: #475467;
-      margin-top: 1px;
-      line-height: 1.4;
-    }
-
-    /* Columns for Compact Grid */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    /* Certificates List */
-    .cert-list {
-      list-style: none;
-      padding: 0;
-      margin: 4px 0 0;
-    }
-    .cert-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: 11px;
-      padding: 2px 0;
-      border-bottom: 1px dashed #f1f5f9;
-    }
-    .cert-title {
-      font-weight: 600;
-      color: #0f172a;
-    }
-    .cert-org {
-      color: #64748b;
-      font-size: 10.5px;
-    }
-
-    /* Print media */
-    @page {
-      size: A4;
-      margin: 10mm 12mm;
-    }
-    @media print {
-      :root { background: #fff; color: #1e293b; }
-      body {
-        background: #fff;
-        font-size: 10pt;
-        line-height: 1.35;
-      }
-      .toolbar { display: none !important; }
-      .sheet {
-        max-width: none;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        border-radius: 0;
-      }
-      a { color: inherit !important; text-decoration: none !important; }
-      .photo-container {
-        border-color: #cbd5e1 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      section, .entry, .skill-row, .project-item {
-        break-inside: avoid;
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 650px) {
-      .sheet { margin: 0; padding: 20px 16px; }
-      .two-col { grid-template-columns: 1fr; gap: 8px; }
-      .identity { flex-direction: column-reverse; align-items: flex-start; }
-      .photo-container { align-self: flex-start; margin-bottom: 8px; }
-      .skill-row { flex-direction: column; gap: 2px; }
-      .skill-label { width: auto; }
-      .toolbar { flex-direction: column; align-items: stretch; gap: 10px; }
-      .toolbar-actions { justify-content: flex-end; }
+    .pdf-fallback a {
+      color: #34d399;
     }
   </style>
 </head>
 <body>
-  <nav class="toolbar" aria-label="Özgeçmiş işlemleri">
-    <div class="toolbar-left">
-      <a href="./" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        Portföye Dön
-      </a>
-    </div>
-    <div class="toolbar-actions">
-      <a href="assets/taner-yigit-cv.pdf" download="Taner-Yigit-CV.pdf" class="btn-action">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-        PDF İndir
-      </a>
-      <button class="btn-action btn-primary" type="button" id="print-cv">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
-        Yazdır / PDF Kaydet
-      </button>
-    </div>
-  </nav>
-
-  <main class="sheet">
-    <!-- Header -->
-    <header class="identity">
-      <div class="identity-text">
-        <h1>TANER YİĞİT</h1>
-        <div class="role">BİLGİ İŞLEM UZMANI / IT DESTEK UZMANI</div>
-        <div class="contact-info">
-          <span>Kağıthane, İstanbul</span>
-          <span>•</span>
-          <a href="tel:05364768669">0536 476 86 69</a>
-          <span>•</span>
-          <a href="mailto:taneryigit.it@gmail.com">taneryigit.it@gmail.com</a>
-          <br>
-          <a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer">linkedin.com/in/taneryigit</a>
-          <span>•</span>
-          <a href="https://www.yigittaner.com/" target="_blank" rel="noopener noreferrer">yigittaner.com</a>
-        </div>
-      </div>
-      <div class="photo-container">
-        <img src="assets/taner-yigit.jpg" alt="Taner Yiğit" width="156" height="196" />
-      </div>
-    </header>
-
-    <!-- Profesyonel Özet -->
-    <section aria-labelledby="summary-title">
-      <h2 id="summary-title">PROFESYONEL ÖZET</h2>
+  <object
+    class="cv-viewer"
+    data="assets/taner-yigit-cv.pdf#view=FitH&navpanes=0"
+    type="application/pdf"
+    aria-label="Taner Yiğit özgeçmişi"
+  >
+    <div class="pdf-fallback">
       <p>
-        Kurumsal BT altyapılarında son kullanıcı desteği (Help Desk / Tier 1-2), Windows istemci yönetimi, donanım arıza tespiti ve yerel ağ (LAN) operasyonlarında deneyimli Bilgi İşlem Uzmanı. Siber güvenlik ve bilişim teknolojileri altyapısıyla sistem kararlılığı, veri bütünlüğü ve ağ erişilebilirliğini en üst seviyede tutma odaklı çalışır; kullanıcı taleplerini ve teknik arızaları SLA standartları doğrultusunda hızlı ve kalıcı çözümlere kavuşturur.
+        Tarayıcınız PDF önizlemesini desteklemiyor.
+        <a href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer">Özgeçmiş PDF dosyasını açın.</a>
       </p>
-    </section>
-
-    <!-- İş Deneyimi -->
-    <section aria-labelledby="experience-title">
-      <h2 id="experience-title">İŞ DENEYİMİ</h2>
-      <article class="entry">
-        <div class="entry-heading">
-          <div>
-            <span class="entry-title">İstanbul Nişantaşı Üniversitesi</span>
-            <span style="color: #64748b;">—</span>
-            <span class="entry-subtitle">Bilgi İşlem Uzman Yardımcısı</span>
-          </div>
-          <span class="date">2026 – Günümüz | İstanbul</span>
-        </div>
-        <ul>
-          <li>Windows 10/11 kurumsal istemcilerde standart imaj dağıtımı, formatlama, sürücü yapılandırması ve kullanıcı yetkilendirme süreçlerini yürütme.</li>
-          <li>Masaüstü ve dizüstü sistemlerde donanım arıza tespiti, RAM/SSD bileşen montajı ve çevre birimlerinin entegrasyonunu gerçekleştirme.</li>
-          <li>Ağ yazıcılarının IP yapılandırması, sunucu üzerinden paylaşıma açılması, sürücü kurulumları ve baskı kuyruğu/bağlantı sorunlarının giderilmesi.</li>
-          <li>RJ45 Ethernet sonlandırma, patch panel & switch port bağlantıları, priz kontrolleri ve fiziksel ağ (LAN) altyapısının sürekliliğini sağlama.</li>
-          <li>TCP/IP, DNS, DHCP ve yerel ağ kaynaklı erişim problemlerini tespit ederek ağ kesintilerini en aza indirme.</li>
-          <li>AnyDesk, TeamViewer ve RDP gibi uzak bağlantı protokolleri ile son kullanıcılara anlık uzaktan teknik destek sağlama.</li>
-          <li>Windows işletim sistemlerinde başlangıç, servis ve kaynak kullanımını optimize ederek istemci performansını ve kararlılığını artırma.</li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- Teknik Yetkinlikler -->
-    <section aria-labelledby="skills-title">
-      <h2 id="skills-title">TEKNİK YETKİNLİKLER</h2>
-      <div class="skills-grid">
-        <div class="skill-row">
-          <span class="skill-label">IT Destek & İstemci:</span>
-          <span class="skill-value">Son Kullanıcı Desteği (Help Desk / Tier 1-2), Windows 10/11 Pro/Enterprise, Format/İmaj Alma, Sürücü & Yazılım Dağıtımı</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Ağ & Altyapı:</span>
-          <span class="skill-value">TCP/IP, DNS, DHCP, LAN/WAN, RJ45 Kablolama & Priz Çakma, Patch Panel, Modem/Router/Switch Yapılandırması</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Donanım & Çevre:</span>
-          <span class="skill-value">PC/Laptop Donanım Montajı & Arıza Tespiti, Parça Değişimi (RAM/SSD), Ağ Yazıcıları & Tarayıcı Yapılandırması</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Sistem & Araçlar:</span>
-          <span class="skill-value">Active Directory (Temel Kullanıcı/Grup Yönetimi), PowerShell, CMD, Uzak Masaüstü (RDP, AnyDesk), MS Office 365, Hyper-V</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-label">Bilişim Güvenliği:</span>
-          <span class="skill-value">Temel Ağ Güvenliği, Uç Nokta Güvenliği (Endpoint Security), Güvenli Sistem Konfigürasyonu, Veri Yedekleme</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projeler -->
-    <section aria-labelledby="projects-title">
-      <h2 id="projects-title">PROJELER & SİSTEMLER</h2>
-      
-      <div class="project-item">
-        <div class="project-header">
-          <span class="project-name">Kişisel Web Sitesi & BT Vitrini</span>
-          <a class="project-link" href="https://www.yigittaner.com/" target="_blank" rel="noopener noreferrer">yigittaner.com</a>
-        </div>
-        <div class="project-desc">
-          Modern web standartlarında (Tailwind CSS, Canvas Plexus, Responsive UI, Schema.org) geliştirilen, kurumsal BT operasyonları ve teknik yetkinlikleri sergileyen interaktif portföy platformu.
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <span class="project-name">Nita Yollarda (Web Tabanlı Oyun)</span>
-          <a class="project-link" href="https://yigittaner.online/" target="_blank" rel="noopener noreferrer">yigittaner.online</a>
-        </div>
-        <div class="project-desc">
-          HTML5 Canvas ve JavaScript ile geliştirilen 2D etkileşimli oyun. Arayüz dinamiği, oyun mekanikleri ve tarayıcı performans optimizasyonu.
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <span class="project-name">Project Gun (3D FPS Web Oyunu)</span>
-          <a class="project-link" href="https://yigittaner.online/project-gun/" target="_blank" rel="noopener noreferrer">yigittaner.online/project-gun</a>
-        </div>
-        <div class="project-desc">
-          Babylon.js kütüphanesi ile geliştirilen tarayıcı tabanlı 3D FPS deneyimi. Beş zombi dalgası, ganimet/loot sistemi, farklı silah sınıfları ve WebGL optimizasyonu.
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="edu-title">
-      <h2 id="edu-title">EĞİTİM</h2>
-      <div class="entry" style="margin-top: 4px;">
-        <div class="entry-title">Bilişim Güvenliği Teknolojisi (Siber Güvenlik)</div>
-        <div style="font-size: 11px; color: #0369a1; font-weight: 600;">İstanbul Kent Üniversitesi — Ön Lisans</div>
-        <div class="date" style="margin-top: 1px;">2024 – 2026</div>
-      </div>
-      <div class="entry" style="margin-top: 6px;">
-        <div class="entry-title">Sadabad Anadolu Lisesi</div>
-        <div style="font-size: 11px; color: #475467;">Lise Eğitimi</div>
-        <div class="date" style="margin-top: 1px;">2019 – 2023</div>
-      </div>
-    </section>
-
-    <!-- Diller & Ek Yetkinlikler -->
-    <section aria-labelledby="extra-title">
-      <h2 id="extra-title">DİLLER & EK YETKİNLİKLER</h2>
-      <div style="font-size: 11px; color: #334155; line-height: 1.5; margin-top: 4px;">
-        <div><strong>• İngilizce:</strong> B1 Seviye (Teknik dokümantasyon, literatür takibi ve arıza araştırma)</div>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    const printButton = document.getElementById('print-cv');
-    if (printButton) {
-      printButton.addEventListener('click', () => window.print());
-    }
-  </script>
+    </div>
+  </object>
 </body>
 </html>
