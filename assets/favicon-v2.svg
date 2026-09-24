@@ -1,1 +1,6 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0B0F17"/><text x="32" y="42" font-family="monospace" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">TY<tspan fill="#10B981">_</tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><linearGradient id="g" x1="9" y1="7" x2="55" y2="57"><stop stop-color="#c084fc"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs>
+  <rect width="64" height="64" rx="16" fill="#0b0814"/>
+  <path d="M14 16.5h36L43.5 24H35v24l-6 4V24h-8.5L14 16.5Z" fill="url(#g)"/>
+  <path d="m35 28 7.2 7.7L50 27.4V38L35 52V28Z" fill="#e9d5ff" fill-opacity=".9"/>
+</svg>

@@ -1,1069 +1,238 @@
-<!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<!doctype html>
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taner Yiğit | BT Operasyonları ve Sistem</title>
-    <meta name="description" content="BT Operasyon Uzmanı. Sistem, ağ altyapısı ve uç nokta operasyonları." />
-    <meta name="theme-color" content="#0B0F17">
-    <link rel="canonical" href="https://www.yigittaner.com/">
-    <link rel="icon" href="assets/favicon-v2.svg" type="image/svg+xml">
-    
-    <!-- Open Graph / Meta -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yigittaner.com/">
-    <meta property="og:title" content="Taner Yiğit | BT Operasyonları ve Sistem">
-    <meta property="og:description" content="BT Operasyon Uzmanı. Sistem, ağ altyapısı ve uç nokta operasyonları.">
-    <meta property="og:image" content="https://www.yigittaner.com/assets/taner-yigit.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.yigittaner.com/">
-    <meta property="twitter:title" content="Taner Yiğit | BT Operasyonları ve Sistem">
-    <meta property="twitter:description" content="BT Operasyon Uzmanı. Sistem, ağ altyapısı ve uç nokta operasyonları.">
-    <meta property="twitter:image" content="https://www.yigittaner.com/assets/taner-yigit.jpg">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: '#0B0F17',
-                        surface: '#111827',
-                        accent: '#10B981',
-                        card: 'rgba(17, 24, 39, 0.6)',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    animation: {
-                        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taner Yiğit | IT Support, Systems &amp; Networking</title>
+  <meta name="description" content="Taner Yiğit'in IT destek, sistem, ağ ve uç nokta operasyonları odaklı kişisel portfolyosu.">
+  <meta name="theme-color" content="#09070f">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.yigittaner.com/">
+  <link rel="icon" href="assets/favicon-v2.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/purple-systems-wallpaper.jpg" fetchpriority="high">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Taner Yiğit">
+  <meta property="og:url" content="https://www.yigittaner.com/">
+  <meta property="og:title" content="Taner Yiğit | IT Support, Systems &amp; Networking">
+  <meta property="og:description" content="IT destek, sistem, ağ ve uç nokta operasyonları odaklı kişisel portfolyo.">
+  <meta property="og:image" content="https://www.yigittaner.com/assets/purple-systems-wallpaper.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taner Yiğit | IT Support, Systems &amp; Networking">
+  <meta name="twitter:description" content="IT destek, sistem, ağ ve uç nokta operasyonları odaklı kişisel portfolyo.">
+  <meta name="twitter:image" content="https://www.yigittaner.com/assets/purple-systems-wallpaper.jpg">
 
-    <!-- JSON-LD Structured Data (Schema.org Person) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Taner Yiğit",
-        "jobTitle": "BT Operasyon Uzmanı",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "İstanbul Nişantaşı Üniversitesi"
-        },
-        "url": "https://www.yigittaner.com/",
-        "email": "taneryigit.it@gmail.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/taneryigit/",
-            "https://github.com/taneryigitxl"
-        ],
-        "knowsAbout": [
-            "BT Operasyonları",
-            "Ağ Altyapısı",
-            "Sistem Yönetimi",
-            "Uç Nokta Yönetimi",
-            "Active Directory",
-            "Siber Güvenlik"
-        ]
-    }
-    </script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Taner Yiğit",
+    "jobTitle": "Bilgi İşlem Uzman Yardımcısı",
+    "worksFor": {"@type": "Organization", "name": "İstanbul Nişantaşı Üniversitesi"},
+    "url": "https://www.yigittaner.com/",
+    "email": "mailto:taneryigit.it@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/taneryigit/",
+      "https://github.com/taneryigitxl"
+    ],
+    "knowsAbout": ["IT Support", "Network Infrastructure", "System Administration", "Endpoint Management", "Active Directory", "Cyber Security"]
+  }
+  </script>
 </head>
-<body class="bg-background text-slate-300 antialiased selection:bg-accent/30 selection:text-white overflow-x-hidden">
-    
-    <!-- Plexus Animated Background -->
-    <canvas id="plexus-canvas" class="fixed inset-0 z-[-1] opacity-40"></canvas>
+<body>
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5 bg-background/80 backdrop-blur-xl">
-        <div class="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-white font-mono font-bold tracking-tight text-lg hover:text-accent transition-colors z-20">TY<span class="text-accent">_</span></a>
-            
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                <a href="#hakkimda" class="hover:text-white transition-colors">Hakkımda</a>
-                <a href="#deneyim" class="hover:text-white transition-colors">Deneyim</a>
-                <a href="#egitim" class="hover:text-white transition-colors">Eğitim</a>
-                <a href="#projeler" class="hover:text-white transition-colors">Projeler</a>
-                <a href="#sertifikalar" class="hover:text-white transition-colors">Sertifikalar</a>
-                <a href="#ozgecmis" class="hover:text-white transition-colors">Özgeçmiş</a>
-                <a href="#iletisim" class="hover:text-white transition-colors">İletişim</a>
-            </nav>
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="#anasayfa" aria-label="Taner Yiğit ana sayfa">
+        <img src="assets/taner-yigit-mark.svg" width="44" height="44" alt="Taner Yiğit logosu">
+        <span class="brand-copy"><strong>Taner Yiğit</strong><small>IT Operations</small></span>
+      </a>
 
-            <div class="flex items-center gap-4 z-20">
-                <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-                    </span>
-                    <span class="text-xs font-medium text-accent tracking-wide uppercase">Sistem Aktif</span>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50" aria-label="Menüyü aç" aria-expanded="false">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+      <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Ana navigasyon">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#yetenekler">Yetkinlikler</a>
+        <a href="#deneyim">Deneyim</a>
+        <a href="#egitim">Eğitim</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#sertifikalar">Sertifikalar</a>
+        <a class="nav-cta" href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="anasayfa" data-section aria-labelledby="hero-title">
+      <img class="hero-wallpaper" src="assets/purple-systems-wallpaper.jpg" width="1680" height="945" alt="" fetchpriority="high" decoding="async">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/purple-systems-wallpaper.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/hero-lightning.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Taner <span>Yiğit</span></h1>
+          <p class="hero-role">IT Support <i>•</i> Systems <i>•</i> Networking</p>
+          <p class="hero-lead">İstanbul Nişantaşı Üniversitesi'nde son kullanıcı desteği, donanım arıza tespiti ve ağ altyapısı operasyonlarında çalışıyorum.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#iletisim">İletişime geç <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer">CV'yi görüntüle <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-socials" aria-label="Sosyal bağlantılar">
+            <a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profilini aç">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.2H3.2V21h3.3V8.2ZM4.8 3A1.9 1.9 0 1 0 4.8 6.8 1.9 1.9 0 0 0 4.8 3Zm5.2 5.2V21h3.3v-6.3c0-1.7.3-3.3 2.4-3.3 2 0 2.1 1.9 2.1 3.4V21H21v-7c0-3.4-.7-6.1-4.8-6.1-1.9 0-3.2 1-3.8 2.1h-.1V8.2H10Z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/taneryigitxl" target="_blank" rel="noopener noreferrer" aria-label="GitHub profilini aç">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1 1.6 1 .9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.6 9.6 0 0 1 5.1 0c2-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1.1 2.7c0 3.9-2.4 4.7-4.7 5 .4.3.7 1 .7 2V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+              GitHub
+            </a>
+          </div>
         </div>
 
-        <!-- Mobile Nav (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-white/10 py-6 px-6 flex flex-col gap-4 shadow-2xl transition-all">
-            <a href="#hakkimda" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Hakkımda</a>
-            <a href="#deneyim" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Deneyim</a>
-            <a href="#egitim" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Eğitim</a>
-            <a href="#projeler" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Projeler</a>
-            <a href="#sertifikalar" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Sertifikalar</a>
-            <a href="#ozgecmis" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">Özgeçmiş</a>
-            <a href="#iletisim" class="mobile-link text-slate-300 hover:text-white font-medium text-base py-1">İletişim</a>
+      </div>
+      <a class="scroll-cue" href="#hakkimda" aria-label="Hakkımda bölümüne git"><span></span> Keşfet</a>
+    </section>
+
+    <section class="section about-section" id="hakkimda" data-section aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="section-intro" data-reveal>
+          <p class="section-kicker">01 / Hakkımda</p>
+          <h2 id="about-title">Son kullanıcı, donanım ve <span class="accent-text">ağ operasyonları.</span></h2>
+          <p>İstanbul Nişantaşı Üniversitesi'nde Bilgi İşlem Uzman Yardımcısıyım. Kampüs kullanıcılarına destek veriyorum; uç nokta ve donanım arızalarını tespit ediyorum ve ağ altyapısı cihazlarının saha operasyonlarında görev alıyorum.</p>
+          <div class="about-points">
+            <div><span>01</span><p><strong>Son kullanıcı desteği</strong>Uç nokta sorunlarını inceleme ve giderme.</p></div>
+            <div><span>02</span><p><strong>Donanım</strong>Arıza tespiti ve fiziksel operasyon.</p></div>
+            <div><span>03</span><p><strong>Ağ altyapısı</strong>Ağ cihazlarına saha desteği.</p></div>
+          </div>
         </div>
-    </header>
 
-    <main class="pt-32 pb-24 max-w-[1400px] mx-auto px-4 sm:px-6">
-        
-        <!-- Hero Section -->
-        <section id="hakkimda" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32 fade-up">
-            <div class="space-y-8 relative z-10">
-                <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 sm:gap-8 blur-in">
-                    <div class="relative w-36 h-36 sm:w-40 sm:h-40 shrink-0 flex items-center justify-center">
-                        <!-- Arka plan parlama halkası (Glow) -->
-                        <div class="absolute inset-0 rounded-full bg-accent/20 blur-xl"></div>
-                        
-                        <!-- Görsel: object-center ile tam ortalı, zoom kayması olmadan -->
-                        <img 
-                            src="assets/taner-yigit.jpg" 
-                            alt="Taner Yiğit" 
-                            width="160" 
-                            height="160"
-                            fetchpriority="high"
-                            class="relative w-full h-full object-cover rounded-full border-2 border-white/15 shadow-2xl animate-float bg-[#f6f5f3]"
-                            style="object-position: calc(50% + 5px) 22%;"
-                        />
-                    </div>
+        <figure class="profile-card" data-reveal>
+          <div class="profile-photo-wrap">
+            <img src="assets/taner-yigit.jpg" width="500" height="650" alt="Taner Yiğit portresi" loading="lazy" decoding="async">
+            <div class="profile-badge"><span></span> İstanbul, TR</div>
+          </div>
+          <figcaption>
+            <div><strong>Taner Yiğit</strong><small>Bilgi İşlem Uzman Yardımcısı</small></div>
+            <span class="profile-monogram">TY</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-                    <!-- Başlık ve Unvan -->
-                    <div class="flex flex-col justify-center">
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-                            Taner <span class="text-slate-500">Yiğit</span>
-                        </h1>
-                        <h2 class="text-lg sm:text-xl font-medium text-slate-400 font-mono mt-2 flex items-center justify-center sm:justify-start gap-1.5">
-                            <span class="text-accent">></span> BT Operasyon Uzmanı
-                        </h2>
-                    </div>
-                </div>
-                
-                <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl blur-in text-center sm:text-left mx-auto sm:mx-0" style="animation-delay: 200ms;">
-                    İstanbul Nişantaşı Üniversitesi'nde Bilgi İşlem Uzman Yardımcısı olarak görev yapıyorum. Kampüs içerisindeki donanım, ağ cihazları ve uç nokta sistemlerinin günlük operasyonlarını yönetiyor, son kullanıcı destek süreçlerini iyileştiriyorum. BT altyapısının kesintisiz çalışması ve fiziksel donanım arızalarının hızlıca çözüme kavuşturulması temel sorumluluklarım arasında yer alıyor.
-                </p>
-                
-                <div class="flex flex-wrap justify-center sm:justify-start gap-4 pt-2 blur-in" style="animation-delay: 300ms;">
-                    <a href="#iletisim" class="inline-flex items-center justify-center gap-2 px-6 py-3 glass glass-hover text-white font-medium rounded-lg transition-all group border border-white/10 hover:border-white/30 hover:-translate-y-1">
-                        <i data-lucide="mail" class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors"></i> İletişim
-                    </a>
-                    <a href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 glass glass-hover text-slate-300 hover:text-white font-medium rounded-lg transition-all group border border-white/10 hover:border-white/30 hover:-translate-y-1">
-                        <i data-lucide="file-down" class="w-4 h-4 text-slate-400 group-hover:text-accent transition-colors"></i> Özgeçmiş (PDF)
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Terminal Mockup -->
-            <div class="glass rounded-xl overflow-hidden shadow-2xl border border-white/10 group blur-in relative z-10 hover:-translate-y-2 transition-transform duration-500 w-full" style="animation-delay: 400ms;" aria-hidden="true">
-                <div class="bg-surface/90 border-b border-white/5 px-4 py-3 flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-accent/80"></div>
-                    <div class="ml-4 text-xs font-mono text-slate-500">admin@ty-sistem: ~</div>
-                </div>
-                <div id="terminal-body" class="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto w-full min-h-[180px]">
-                    <!-- Content injected by typing animation script -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Bento Grid: Yetenekler -->
-        <section class="mb-32 fade-up">
-            <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="cpu" class="w-6 h-6 text-accent"></i> Teknik Stack
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Network -->
-                <div class="bento-card glass rounded-2xl p-6 sm:p-8 hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
-                            <i data-lucide="network" class="w-6 h-6 text-blue-400"></i>
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-3">Ağ & Altyapı</h4>
-                        <p class="text-slate-400 text-sm mb-6">Ağ mimarileri, cihaz yapılandırmaları ve trafik analizi üzerine güncel çalışmalar.</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Ağ Temelleri</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Switching</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">VLAN</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">TCP/IP</span>
-                    </div>
-                </div>
-                
-                <!-- System -->
-                <div class="bento-card glass rounded-2xl p-6 sm:p-8 hover:-translate-y-2 transition-transform duration-500 flex flex-col justify-between h-full">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
-                            <i data-lucide="server" class="w-6 h-6 text-accent"></i>
-                        </div>
-                        <h4 class="text-lg font-bold text-white mb-3">Sistem & Destek</h4>
-                        <p class="text-slate-400 text-sm mb-6">Son kullanıcı donanımları, merkezi yönetim ve işletim sistemi operasyonları.</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Windows İstemci</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Active Directory</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Donanım Onarımı</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">PowerShell</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Hyper-V / Sanallaştırma</span>
-                        <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300 hover:text-white transition-colors">Sistem İzleme</span>
-                    </div>
-                </div>
-
-                <!-- Code / Scripting & Extra (Split Column) -->
-                <div class="grid grid-rows-2 gap-6">
-                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-500">
-                        <div class="flex items-center gap-4 mb-4">
-                             <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                                <i data-lucide="code" class="w-5 h-5 text-purple-400"></i>
-                            </div>
-                            <h4 class="font-bold text-white">Kodlama</h4>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">JavaScript</span>
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">Babylon.js</span>
-                            <span class="px-2.5 py-1 text-xs font-mono bg-surface rounded-md border border-white/10 text-slate-300">HTML/CSS</span>
-                        </div>
-                    </div>
-                    
-                    <div class="bento-card glass rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group">
-                        <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                            <i data-lucide="keyboard" class="w-32 h-32"></i>
-                        </div>
-                        <div class="flex flex-col h-full justify-center relative z-10">
-                            <div class="flex items-baseline gap-3 mb-1">
-                                <div class="text-3xl font-bold text-white">150 <span class="text-sm text-slate-500 font-mono font-normal">WPM</span></div>
-                                <span class="px-2 py-0.5 text-xs font-mono font-bold text-accent bg-accent/10 border border-accent/20 rounded-md whitespace-nowrap">%99 Doğruluk</span>
-                            </div>
-                            <p class="text-xs text-slate-400">10FastFingers TR Top 10 • Hızlı terminal ve dokümantasyon girişi.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Deneyim Timeline -->
-        <section id="deneyim" class="scroll-mt-24 mb-32 fade-up">
-            <h3 class="text-2xl font-bold text-white mb-12 flex items-center gap-3">
-                <i data-lucide="briefcase" class="w-6 h-6 text-accent"></i> Deneyim
-            </h3>
-            
-            <div class="relative pl-8 md:pl-0">
-                <!-- Line -->
-                <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-white/5">
-                    <div class="absolute top-0 h-full w-full bg-gradient-to-b from-accent/80 to-transparent shadow-[0_0_15px_rgba(16,185,129,0.3)]"></div>
-                </div>
-                <div class="md:hidden timeline-line"></div>
-
-                <div class="space-y-12">
-                    <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center group">
-                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0 transform transition-transform group-hover:-translate-x-2">
-                            <h4 class="text-lg font-bold text-white">Bilgi İşlem Uzman Yardımcısı</h4>
-                            <p class="text-accent font-medium text-sm mt-1">İstanbul Nişantaşı Üniversitesi</p>
-                            <p class="text-slate-500 text-xs font-mono mt-2">2026 - Devam Ediyor</p>
-                        </div>
-                        
-                        <!-- Node -->
-                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-accent shadow-[0_0_15px_rgba(16,185,129,0.6)] z-10 mt-1 md:mt-0 transition-transform group-hover:scale-125"></div>
-                        
-                        <div class="md:w-[45%] md:pl-12 transform transition-transform group-hover:translate-x-2 w-full">
-                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shadow-lg">
-                                Kampüs içi son kullanıcı desteği, donanım arıza tespiti ve ağ altyapı cihazlarının fiziksel ve yazılımsal operasyonlarında aktif rol alıyorum.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Eğitim Timeline -->
-        <section id="egitim" class="scroll-mt-24 mb-32 fade-up">
-            <h3 class="text-2xl font-bold text-white mb-12 flex items-center gap-3">
-                <i data-lucide="graduation-cap" class="w-6 h-6 text-accent"></i> Eğitim
-            </h3>
-            
-            <div class="relative pl-8 md:pl-0">
-                <!-- Line -->
-                <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-white/5">
-                    <div class="absolute top-0 h-full w-full bg-gradient-to-b from-blue-500/80 to-transparent shadow-[0_0_15px_rgba(59,130,246,0.3)]"></div>
-                </div>
-                <div class="md:hidden timeline-line" style="background: linear-gradient(to bottom, rgba(59, 130, 246, 0.8), transparent); box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);"></div>
-
-                <div class="space-y-12">
-                    <!-- Kent University -->
-                    <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center group">
-                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0 transform transition-transform group-hover:-translate-x-2">
-                            <h4 class="text-lg font-bold text-white">Bilişim Güvenliği Teknolojisi</h4>
-                            <p class="text-blue-400 font-medium text-sm mt-1">İstanbul Kent Üniversitesi</p>
-                            <p class="text-slate-500 text-xs font-mono mt-2">2024 - 2026</p>
-                        </div>
-                        
-                        <!-- Node -->
-                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10 mt-1 md:mt-0 transition-transform group-hover:scale-125"></div>
-                        
-                        <div class="md:w-[45%] md:pl-12 transform transition-transform group-hover:translate-x-2 w-full">
-                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shadow-lg">
-                                Siber güvenlik, ağ yönetimi, işletim sistemleri güvenliği ve kriptografi temelinde kapsamlı önlisans eğitimi.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Sadabad -->
-                    <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center group">
-                        <div class="md:w-[45%] md:text-right md:pr-12 mb-4 md:mb-0 transform transition-transform group-hover:-translate-x-2">
-                            <h4 class="text-lg font-bold text-white">Lise Eğitimi</h4>
-                            <p class="text-slate-300 font-medium text-sm mt-1">Sadabad Anadolu Lisesi</p>
-                            <p class="text-slate-500 text-xs font-mono mt-2">2019 - 2023</p>
-                        </div>
-                        
-                        <!-- Node -->
-                        <div class="absolute left-[-37px] md:left-[50%] md:-translate-x-1/2 w-5 h-5 rounded-full bg-background border-2 border-slate-500 z-10 mt-1 md:mt-0 transition-transform group-hover:scale-125"></div>
-                        
-                        <div class="md:w-[45%] md:pl-12 transform transition-transform group-hover:translate-x-2 w-full">
-                            <p class="text-slate-400 text-sm leading-relaxed glass p-5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shadow-lg">
-                                Temel bilimler ve analitik düşünme odaklı lise eğitimi.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projeler -->
-        <section id="projeler" class="scroll-mt-24 mb-32 fade-up">
-            <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="blocks" class="w-6 h-6 text-accent"></i> Projeler
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                
-                <!-- Project Card -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl group flex flex-col shadow-lg w-full transition-all duration-500 ease-linear" style="transform-style: preserve-3d;">
-                        <div class="aceternity-item h-48 sm:h-56 w-full bg-surface relative overflow-hidden rounded-t-2xl transition-all duration-200 ease-linear" data-translate-z="40px">
-                            <img src="assets/menu-atlas-nita-bg.png" alt="Nita Yollarda" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" style="object-position: center top;" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-                        </div>
-                        <div class="aceternity-item p-6 flex flex-col flex-grow -mt-12 relative z-10 transition-all duration-200 ease-linear" data-translate-z="60px">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center border border-white/10 shadow-lg">
-                                    <i data-lucide="gamepad-2" class="w-6 h-6 text-accent"></i>
-                                </div>
-                                <div class="flex gap-2 bg-background/80 backdrop-blur-sm rounded-lg p-1 border border-white/10">
-                                    <a href="https://yigittaner.online/" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-accent transition-colors" title="Canlı Demo">
-                                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <h4 class="text-xl font-bold text-white mb-2">Nita Yollarda</h4>
-                            <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Web tabanlı interaktif oyun projesi. Kullanıcı etkileşimleri ve oyun mekanikleri barındırır.</p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Oyun Geliştirme</span>
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flyworm -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl group flex flex-col shadow-lg w-full transition-all duration-500 ease-linear" style="transform-style: preserve-3d;">
-                        <div class="aceternity-item h-48 sm:h-56 w-full bg-surface relative overflow-hidden rounded-t-2xl transition-all duration-200 ease-linear" data-translate-z="40px">
-                            <img src="assets/flyworm-app.png" alt="Flyworm uygulama arayüzü" loading="lazy" decoding="async" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-                        </div>
-                        <div class="aceternity-item p-6 flex flex-col flex-grow -mt-12 relative z-10 transition-all duration-200 ease-linear" data-translate-z="60px">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center border border-white/10 shadow-lg overflow-hidden p-1.5">
-                                    <img src="assets/flyworm-logo.png" alt="Flyworm logosu" loading="lazy" decoding="async" class="w-full h-full object-contain" />
-                                </div>
-                                <div class="flex gap-2 bg-background/80 backdrop-blur-sm rounded-lg p-1 border border-white/10">
-                                    <a href="https://github.com/taneryigitxl/flyworm" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white transition-colors" title="Flyworm GitHub deposu" aria-label="Flyworm GitHub deposunu aç">
-                                        <i data-lucide="github" class="w-4 h-4"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <h4 class="text-xl font-bold text-white mb-2">Flyworm</h4>
-                            <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Windows 11 için bilgisayar hızlandırma ve tweak uygulaması.</p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Windows 11</span>
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Optimizasyon</span>
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Tweak</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tondy Pc Doctor -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl group flex flex-col shadow-lg w-full transition-all duration-500 ease-linear" style="transform-style: preserve-3d;">
-                        <div class="aceternity-item h-48 sm:h-56 w-full bg-surface relative overflow-hidden rounded-t-2xl transition-all duration-200 ease-linear" data-translate-z="40px">
-                            <img src="assets/tondy-pc-doctor-app.png" alt="Tondy Pc Doctor uygulama arayüzü" loading="lazy" decoding="async" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-                        </div>
-                        <div class="aceternity-item p-6 flex flex-col flex-grow -mt-12 relative z-10 transition-all duration-200 ease-linear" data-translate-z="60px">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-background flex items-center justify-center border border-white/10 shadow-lg overflow-hidden p-1.5">
-                                    <img src="assets/tondy-pc-doctor-logo.png" alt="Tondy Pc Doctor logosu" loading="lazy" decoding="async" class="w-full h-full object-contain" />
-                                </div>
-                                <div class="flex gap-2 bg-background/80 backdrop-blur-sm rounded-lg p-1 border border-white/10">
-                                    <a href="https://github.com/taneryigitxl/tondy-pc-doctor" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white transition-colors" title="Tondy Pc Doctor GitHub deposu" aria-label="Tondy Pc Doctor GitHub deposunu aç">
-                                        <i data-lucide="github" class="w-4 h-4"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <h4 class="text-xl font-bold text-white mb-2">Tondy Pc Doctor</h4>
-                            <p class="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">Windows tanı ve sorun giderme uygulaması. IT teknisyenleri ve son kullanıcılar için canlı sistem verisini okur; uydurma sağlık puanı üretmez.</p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Windows</span>
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Tanılama</span>
-                                <span class="px-2 py-1 text-xs font-mono text-slate-300 bg-surface border border-white/5 rounded hover:bg-white/5 transition-colors">Sorun Giderme</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            </div>
-        </section>
-
-        <!-- Sertifikalar (Bento Style with Images) -->
-        <section id="sertifikalar" class="scroll-mt-24 fade-up mb-32">
-             <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="award" class="w-6 h-6 text-accent"></i> Sertifikalar
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-
-                <!-- Google AI Essentials -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-500 ease-linear group flex flex-col shadow-lg w-full" style="transform-style: preserve-3d;">
-                    <a href="assets/certificates/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer" class="h-48 sm:h-64 w-full bg-surface relative overflow-hidden rounded-t-2xl flex items-center justify-center p-4 block cursor-pointer" style="transform: translateZ(30px);" aria-label="Google AI Essentials PDF'ini aç">
-                        <img src="assets/certificates/google-ai-essentials.png" alt="Google AI Essentials Sertifikası" loading="lazy" decoding="async" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-                    </a>
-                    <div class="p-6 flex flex-col flex-grow -mt-8 relative z-10" style="transform: translateZ(60px);">
-                        <h4 class="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">Google AI Essentials</h4>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">Google · Coursera</span>
-                        <a href="assets/certificates/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4"></i> PDF Görüntüle
-                        </a>
-                    </div>
-                </div>
-                </div>
-                
-                <!-- BTK Bilgi Teknolojileri -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-500 ease-linear group flex flex-col shadow-lg w-full" style="transform-style: preserve-3d;">
-                    <a href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" rel="noopener noreferrer" class="h-48 sm:h-64 w-full bg-surface relative overflow-hidden rounded-t-2xl flex items-center justify-center p-4 block cursor-pointer" style="transform: translateZ(30px);" aria-label="Bilgi Teknolojilerine Giriş PDF'ini aç">
-                        <img src="assets/certificates/bilgi-teknolojilerine-giris.png" alt="Bilgi Teknolojilerine Giriş" loading="lazy" decoding="async" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop'" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-                    </a>
-                    <div class="p-6 flex flex-col flex-grow -mt-8 relative z-10" style="transform: translateZ(60px);">
-                        <h4 class="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">Bilgi Teknolojilerine Giriş</h4>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">BTK Akademi</span>
-                        <a href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4"></i> PDF Görüntüle
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-                <!-- BTK İşletim Sistemleri -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-500 ease-linear group flex flex-col shadow-lg w-full" style="transform-style: preserve-3d;">
-                    <a href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" rel="noopener noreferrer" class="h-48 sm:h-64 w-full bg-surface relative overflow-hidden rounded-t-2xl flex items-center justify-center p-4 block cursor-pointer" style="transform: translateZ(30px);" aria-label="İşletim Sistemlerine Giriş PDF'ini aç">
-                        <img src="assets/certificates/isletim-sistemlerine-giris.png" alt="İşletim Sistemlerine Giriş" loading="lazy" decoding="async" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=600&auto=format&fit=crop'" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-                    </a>
-                    <div class="p-6 flex flex-col flex-grow -mt-8 relative z-10" style="transform: translateZ(60px);">
-                        <h4 class="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">İşletim Sistemlerine Giriş</h4>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">BTK Akademi</span>
-                        <a href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4"></i> PDF Görüntüle
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-                <!-- BTK Cisco Ağ Temelleri -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-500 ease-linear group flex flex-col shadow-lg w-full" style="transform-style: preserve-3d;">
-                    <a href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" rel="noopener noreferrer" class="h-48 sm:h-64 w-full bg-surface relative overflow-hidden rounded-t-2xl flex items-center justify-center p-4 block cursor-pointer" style="transform: translateZ(30px);" aria-label="Cisco Ağ Temelleri PDF'ini aç">
-                        <div class="cert-pdf-frame filter brightness-90 group-hover:brightness-100 transition-all duration-500">
-                            <iframe src="assets/certificates/cisco-ag-temelleri.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" title="Cisco Ağ Temelleri Sertifikası" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" class="cert-pdf-preview pointer-events-none"></iframe>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-                    </a>
-                    <div class="p-6 flex flex-col flex-grow -mt-8 relative z-10" style="transform: translateZ(60px);">
-                        <h4 class="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">Cisco Ağ Temelleri</h4>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">BTK Akademi</span>
-                        <a href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4"></i> PDF Görüntüle
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-                <!-- BTK İleri Ağ Teknolojileri -->
-                <div class="aceternity-container flex items-center justify-center w-full" style="perspective: 1000px;">
-                    <div class="aceternity-card glass border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-500 ease-linear group flex flex-col shadow-lg w-full" style="transform-style: preserve-3d;">
-                    <a href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" rel="noopener noreferrer" class="h-48 sm:h-64 w-full bg-surface relative overflow-hidden rounded-t-2xl flex items-center justify-center p-4 block cursor-pointer" style="transform: translateZ(30px);" aria-label="İleri Ağ Teknolojileri PDF'ini aç">
-                        <div class="cert-pdf-frame filter brightness-90 group-hover:brightness-100 transition-all duration-500">
-                            <iframe src="assets/certificates/ileri-ag-teknolojileri.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" title="İleri Ağ Teknolojileri Sertifikası" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true" class="cert-pdf-preview pointer-events-none"></iframe>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
-                    </a>
-                    <div class="p-6 flex flex-col flex-grow -mt-8 relative z-10" style="transform: translateZ(60px);">
-                        <h4 class="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors">İleri Ağ Teknolojileri</h4>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-4">BTK Akademi</span>
-                        <a href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                            <i data-lucide="file-text" class="w-4 h-4"></i> PDF Görüntüle
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Özgeçmiş (CV) -->
-        <section id="ozgecmis" class="scroll-mt-24 fade-up mb-32">
-            <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="file-text" class="w-6 h-6 text-accent"></i> Özgeçmiş
-            </h3>
-
-            <div class="glass border border-white/5 hover:border-white/20 rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-500 group shadow-xl">
-                <div class="absolute -right-16 -top-16 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/10 transition-colors"></div>
-
-                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                        <div class="relative w-20 h-24 sm:w-24 sm:h-28 shrink-0 rounded-xl overflow-hidden border-2 border-white/10 shadow-lg bg-surface">
-                            <img src="assets/taner-yigit.jpg" alt="Taner Yiğit" class="w-full h-full object-cover object-[60%_15%]" loading="lazy" />
-                        </div>
-                        <div>
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-mono font-bold mb-2">
-                                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span> Güncel Özgeçmiş • 2026
-                            </div>
-                            <h4 class="text-xl sm:text-2xl font-bold text-white">Taner Yiğit</h4>
-                            <p class="text-sm text-accent font-mono font-medium mt-0.5">Bilgi İşlem Uzmanı / IT Destek Uzmanı</p>
-                            <p class="text-xs sm:text-sm text-slate-400 mt-2 max-w-xl leading-relaxed">
-                                İstanbul Nişantaşı Üniversitesi Bilgi İşlem tecrübesi, kurumsal istemci ve yerel ağ operasyonları, siber güvenlik eğitimi ve güncel projelerimi içeren detaylı profesyonel özgeçmiş.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full lg:w-auto">
-                        <a href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent text-background font-bold rounded-xl hover:bg-accent/90 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:-translate-y-0.5 whitespace-nowrap">
-                            <i data-lucide="download" class="w-4 h-4"></i> PDF İndir
-                        </a>
-                        <a href="cv.html" target="_blank" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 glass glass-hover text-white font-medium rounded-xl hover:border-white/30 transition-all hover:-translate-y-0.5 whitespace-nowrap">
-                            <i data-lucide="eye" class="w-4 h-4 text-slate-400 group-hover:text-accent"></i> Web'de İncele
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- İletişim -->
-        <section id="iletisim" class="scroll-mt-24 fade-up pt-12 border-t border-white/5 relative">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50"></div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                <div>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">İletişim</h2>
-                    <p class="text-slate-400 mb-8 leading-relaxed text-lg">BT fırsatları, projeler ve profesyonel iş birlikleri için tanışalım. Bir e-posta kadar yakınım.</p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=taneryigit.it@gmail.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-accent text-background font-bold rounded-xl hover:bg-accent/90 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:-translate-y-1">
-                        Birlikte konuşalım <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </a>
-                </div>
-                
-                <div class="space-y-4">
-                    <!-- Email -->
-                    <div class="glass p-5 sm:p-6 rounded-2xl flex items-center gap-4 border border-white/5 hover:border-accent/50 transition-all group w-full">
-                        <a href="mailto:taneryigit.it@gmail.com" class="flex items-center gap-6 flex-grow min-w-0 glass-hover hover:-translate-x-1 transition-transform">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:border-accent transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                                <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-accent group-hover:text-background transition-colors"></i>
-                            </div>
-                            <div class="overflow-hidden">
-                                <span class="block text-xs font-mono font-bold text-accent mb-1 uppercase tracking-wider">E-Posta</span>
-                                <span class="block text-white font-medium text-base sm:text-lg truncate">taneryigit.it@gmail.com</span>
-                            </div>
-                        </a>
-                        <button id="copy-email-btn" onclick="(function(){navigator.clipboard.writeText('taneryigit.it@gmail.com').then(function(){var btn=document.getElementById('copy-email-btn');var icon=btn.querySelector('i');icon.setAttribute('data-lucide','check');lucide.createIcons();btn.classList.add('text-accent');setTimeout(function(){icon.setAttribute('data-lucide','copy');lucide.createIcons();btn.classList.remove('text-accent');},2000);});})()" class="shrink-0 p-2 rounded-lg text-slate-500 hover:text-white hover:bg-white/10 transition-all" title="E-postayı kopyala" aria-label="E-posta adresini panoya kopyala">
-                            <i data-lucide="copy" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                    
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer" class="glass glass-hover p-5 sm:p-6 rounded-2xl flex justify-between items-center group border border-white/5 hover:border-accent/50 transition-all hover:-translate-x-2 w-full">
-                        <div class="flex items-center gap-6">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:border-accent transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 sm:w-6 sm:h-6 text-accent group-hover:text-background transition-colors"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                            </div>
-                            <div class="overflow-hidden">
-                                <span class="block text-xs font-mono font-bold text-accent mb-1 uppercase tracking-wider">LinkedIn</span>
-                                <span class="block text-white font-medium text-base sm:text-lg truncate">Bağlantı Kuralım</span>
-                            </div>
-                        </div>
-                        <i data-lucide="external-link" class="w-5 h-5 text-accent group-hover:text-white transition-colors shrink-0 ml-4"></i>
-                    </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/taneryigitxl" target="_blank" rel="noopener noreferrer" class="glass glass-hover p-5 sm:p-6 rounded-2xl flex justify-between items-center group border border-white/5 hover:border-accent/50 transition-all hover:-translate-x-2 w-full">
-                        <div class="flex items-center gap-6">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:border-accent transition-colors shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 sm:w-6 sm:h-6 text-accent group-hover:text-background transition-colors"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                            </div>
-                            <div class="overflow-hidden">
-                                <span class="block text-xs font-mono font-bold text-accent mb-1 uppercase tracking-wider">GitHub</span>
-                                <span class="block text-white font-medium text-base sm:text-lg truncate">Kodları Keşfedin</span>
-                            </div>
-                        </div>
-                        <i data-lucide="external-link" class="w-5 h-5 text-accent group-hover:text-white transition-colors shrink-0 ml-4"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-
-    <footer class="border-t border-white/5 py-8 mt-12 bg-background relative z-10">
-        <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <a href="#" class="text-slate-400 font-mono font-bold hover:text-white transition-colors">TY<span class="text-accent">.</span> taner yiğit<span class="text-accent">.</span></a>
-            <p class="text-slate-500 text-sm font-mono">© 2026 Taner Yiğit.</p>
-            <a href="#" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">Başa dön <i data-lucide="arrow-up" class="w-4 h-4"></i></a>
+    <section class="section timeline-section skills-section" id="yetenekler" data-section aria-labelledby="skills-title">
+      <div class="container timeline-container">
+        <div class="timeline-heading" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3m4 0h9M4 12h8m4 0h4M4 17h3m4 0h9"/><circle cx="9" cy="7" r="2"/><circle cx="14" cy="12" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+          <div><p class="section-kicker">02 / Yetkinlikler</p><h2 id="skills-title">Teknik odağım</h2><p>Kurumsal IT desteğinden ağ temellerine, donanımdan otomasyona uzanan pratik bir teknoloji seti.</p></div>
         </div>
-    </footer>
+        <div class="timeline-list skills-list">
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>IT Support</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Son kullanıcı talepleri, olay analizi ve hızlı sorun giderme.</p><ul><li>Uç nokta desteği</li><li>Arıza tespiti</li><li>Dokümantasyon</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Networking</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Ağ mimarileri ve cihaz operasyonları.</p><ul><li>TCP/IP</li><li>Switching</li><li>VLAN</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Systems</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Merkezi yönetim ve sistem operasyonları.</p><ul><li>Active Directory</li><li>Hyper-V</li><li>Sistem izleme</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Operating Systems</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>İstemci kurulum, yapılandırma ve bakımı.</p><ul><li>Windows 11</li><li>Windows istemci</li><li>Güncelleme</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Hardware</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Fiziksel bileşen tanılama ve onarım süreçleri.</p><ul><li>Bakım</li><li>Onarım</li><li>Envanter</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Security</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Siber güvenlik temelleri ve güvenli sistem yaklaşımı.</p><ul><li>Erişim</li><li>Sertleştirme</li><li>Farkındalık</li></ul></div></article>
+          <article class="timeline-row" data-reveal><div class="timeline-summary"><h3>Tools &amp; Automation</h3></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Tekrarlanan işleri sadeleştiren araçlar ve web teknolojileri.</p><ul><li>PowerShell</li><li>JavaScript</li><li>HTML / CSS</li><li>Babylon.js</li></ul></div></article>
+        </div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+    <section class="section timeline-section experience-section" id="deneyim" data-section aria-labelledby="experience-title">
+      <div class="container timeline-container">
+        <div class="timeline-heading" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2m4-2v2"/></svg>
+          <div><p class="section-kicker">03 / Kariyer</p><h2 id="experience-title">Deneyim</h2><p>İstanbul Nişantaşı Üniversitesi · Bilgi İşlem</p></div>
+        </div>
+        <div class="timeline-list experience-list">
+          <article class="timeline-row experience-item" data-reveal>
+            <div class="timeline-summary"><h3>Bilgi İşlem Uzman Yardımcısı</h3><p class="timeline-organization">İstanbul Nişantaşı Üniversitesi</p><span class="timeline-date">2026 — Devam Ediyor</span></div>
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="timeline-description"><p>Kampüs kullanıcılarına ve uç nokta sistemlerine destek veriyorum. Donanım arızalarını tespit ediyorum; ağ altyapısı cihazlarının fiziksel ve yazılımsal operasyonlarında görev alıyorum.</p><ul><li>Son kullanıcı ve uç nokta desteği</li><li>Donanım tanılama ve operasyon</li><li>Ağ altyapısı saha desteği</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        // ─── Terminal Typing Effect ────────────────────────────────────────────
-        (function initTerminal() {
-            const body = document.getElementById('terminal-body');
-            if (!body) return;
+    <section class="section timeline-section education-section" id="egitim" data-section aria-labelledby="education-title">
+      <div class="container timeline-container">
+        <div class="timeline-heading" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v6c3.8 2.7 8.2 2.7 12 0v-6M22 9v7"/></svg>
+          <div><p class="section-kicker">04 / Öğrenim</p><h2 id="education-title">Eğitim</h2><p>Temeli sağlam kurmak. Akademik altyapımı güncel teknolojilerle geliştiriyorum.</p></div>
+        </div>
+        <div class="timeline-list education-list">
+          <article class="timeline-row education-item" data-reveal><div class="timeline-summary"><h3>Bilişim Güvenliği Teknolojisi</h3><p class="timeline-organization">İstanbul Kent Üniversitesi</p><span class="timeline-date">2024 — 2026</span></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Siber güvenlik, ağ yönetimi, işletim sistemleri güvenliği ve kriptografi temelinde kapsamlı önlisans eğitimi.</p></div></article>
+          <article class="timeline-row education-item" data-reveal><div class="timeline-summary"><h3>Lise Eğitimi</h3><p class="timeline-organization">Sadabad Anadolu Lisesi</p><span class="timeline-date">2019 — 2023</span></div><span class="timeline-node" aria-hidden="true"></span><div class="timeline-description"><p>Temel bilimler ve analitik düşünme odaklı lise eğitimi.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-            // Respect prefers-reduced-motion: show static content instantly
-            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const PROMPT = '<span class="text-accent">admin@ty-sistem:~$</span>';
-            const lines = [
-                { type: 'cmd',  text: 'systeminfo --status' },
-                { type: 'out',  text: '[OK] Uç Nokta Yönetimi: Aktif',     color: 'text-green-400' },
-                { type: 'out',  text: '[OK] Ağ Altyapısı: Stabil',          color: 'text-green-400' },
-                { type: 'out',  text: '[OK] Active Directory: Senkronize',  color: 'text-green-400' },
-                { type: 'out',  text: '[OK] IT Destek Masası: Çevrimiçi',   color: 'text-green-400' },
-                { type: 'cmd',  text: 'ping -c 3 sistem.yerel' },
-                { type: 'out',  text: 'PING sistem.yerel (10.0.0.1): 56 data bytes' },
-                { type: 'out',  text: '64 bytes from 10.0.0.1: icmp_seq=0 ttl=64 time=0.123 ms' },
-                { type: 'out',  text: '64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=0.111 ms' },
-                { type: 'out',  text: '64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=0.105 ms' },
-                { type: 'cursor' }
-            ];
+    <section class="section projects-section" id="projeler" data-section aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">05 / Projeler</p><h2 id="projects-title">Fikirden çalışan ürüne.</h2></div><p>Teknik merakı, kullanılabilir ve somut ürünlere dönüştürdüğüm seçili projeler.</p></div>
+        <div class="projects-grid">
+          <article class="project-card project-career" data-reveal data-tilt-card>
+            <a class="project-media" data-tilt-depth="34" href="https://github.com/taneryigitxl/flyworm" target="_blank" rel="noopener noreferrer" aria-label="Flyworm GitHub deposunu aç"><img src="assets/flyworm-app.png" width="1180" height="780" alt="Flyworm uygulama arayüzü" loading="lazy" decoding="async"><img class="project-logo" src="assets/flyworm-logo.png" width="60" height="60" alt="Flyworm logosu" loading="lazy"></a>
+            <div class="project-body" data-tilt-depth="52"><div class="project-top"><span class="project-status"><i></i> GitHub</span><span>01</span></div><h3>Flyworm</h3><p>Windows 11 için bilgisayar hızlandırma ve tweak uygulaması.</p><div class="project-footer"><div class="tags"><span>Windows 11</span><span>Optimizasyon</span><span>Tweak</span></div><a href="https://github.com/taneryigitxl/flyworm" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+          <article class="project-card project-career" data-reveal data-tilt-card>
+            <a class="project-media" data-tilt-depth="34" href="https://github.com/taneryigitxl/tondy-pc-doctor" target="_blank" rel="noopener noreferrer" aria-label="Tondy PC Doctor GitHub deposunu aç"><img src="assets/tondy-pc-doctor-app.png" width="1380" height="880" alt="Tondy PC Doctor uygulama arayüzü" loading="lazy" decoding="async"><img class="project-logo" src="assets/tondy-pc-doctor-logo.png" width="60" height="60" alt="Tondy PC Doctor logosu" loading="lazy"></a>
+            <div class="project-body" data-tilt-depth="52"><div class="project-top"><span class="project-status"><i></i> GitHub</span><span>02</span></div><h3>Tondy PC Doctor</h3><p>Windows sistem verilerini analiz ederek tanılama ve sorun giderme süreçlerini kolaylaştıran masaüstü uygulaması.</p><div class="project-footer"><div class="tags"><span>Windows</span><span>Tanılama</span><span>Sorun Giderme</span></div><a href="https://github.com/taneryigitxl/tondy-pc-doctor" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+          <article class="project-card" data-reveal data-tilt-card>
+            <a class="project-media" data-tilt-depth="34" href="https://yigittaner.online/" target="_blank" rel="noopener noreferrer" aria-label="Nita Yollarda canlı demosunu aç"><img src="assets/menu-atlas-nita-bg.png" width="1672" height="941" alt="Nita Yollarda oyun projesi arayüzü" loading="lazy" decoding="async"></a>
+            <div class="project-body" data-tilt-depth="52"><div class="project-top"><span class="project-status"><i></i> Canlı</span><span>03</span></div><h3>Nita Yollarda</h3><p>Web tabanlı interaktif oyun projesi. Kullanıcı etkileşimleri ve oyun mekanikleri barındırır.</p><div class="project-footer"><div class="tags"><span>Oyun Geliştirme</span><span>JavaScript</span></div><a href="https://yigittaner.online/" target="_blank" rel="noopener noreferrer">Canlı demo <span aria-hidden="true">↗</span></a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            function renderStatic() {
-                let html = '';
-                lines.forEach(l => {
-                    if (l.type === 'cmd') {
-                        html += `<div class="text-slate-400 whitespace-nowrap mt-2">${PROMPT} ${l.text}</div>`;
-                    } else if (l.type === 'out') {
-                        const cls = l.color || 'text-slate-300';
-                        html += `<div class="${cls} whitespace-nowrap opacity-90">${l.text}</div>`;
-                    } else {
-                        html += `<div class="text-slate-400 mt-4 flex items-center">${PROMPT} <span class="w-2 h-4 bg-slate-400 animate-pulse ml-2 inline-block"></span></div>`;
-                    }
-                });
-                body.innerHTML = html;
-            }
+    <section class="section certificates-section" id="sertifikalar" data-section aria-labelledby="certificates-title">
+      <div class="container">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">06 / Sertifikalar</p><h2 id="certificates-title">Doğrulanabilir gelişim.</h2></div><p>Teknik ve profesyonel gelişim yolculuğumu belgeleyen güncel sertifikalar.</p></div>
+        <div class="certificate-grid">
+          <article class="certificate-card" data-reveal data-tilt-card><a class="certificate-preview" data-tilt-depth="32" href="assets/certificates/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/google-ai-essentials.png" alt="Google AI Essentials sertifikası" width="1600" height="1131" loading="lazy" decoding="async"></a><div data-tilt-depth="48"><span>Google · Coursera</span><h3>Google AI Essentials</h3><a href="assets/certificates/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer">PDF görüntüle <b aria-hidden="true">↗</b></a></div></article>
+          <article class="certificate-card" data-reveal data-tilt-card><a class="certificate-preview" data-tilt-depth="32" href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/bilgi-teknolojilerine-giris.png" alt="Bilgi Teknolojilerine Giriş sertifikası" width="1600" height="1131" loading="lazy" decoding="async"></a><div data-tilt-depth="48"><span>BTK Akademi</span><h3>Bilgi Teknolojilerine Giriş</h3><a href="assets/certificates/bilgi-teknolojilerine-giris.pdf" target="_blank" rel="noopener noreferrer">PDF görüntüle <b aria-hidden="true">↗</b></a></div></article>
+          <article class="certificate-card" data-reveal data-tilt-card><a class="certificate-preview" data-tilt-depth="32" href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/isletim-sistemlerine-giris.png" alt="İşletim Sistemlerine Giriş sertifikası" width="1600" height="1131" loading="lazy" decoding="async"></a><div data-tilt-depth="48"><span>BTK Akademi</span><h3>İşletim Sistemlerine Giriş</h3><a href="assets/certificates/isletim-sistemlerine-giris.pdf" target="_blank" rel="noopener noreferrer">PDF görüntüle <b aria-hidden="true">↗</b></a></div></article>
+          <article class="certificate-card" data-reveal data-tilt-card><a class="certificate-preview" data-tilt-depth="32" href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" rel="noopener noreferrer" aria-label="Cisco Ağ Temelleri sertifikasını PDF olarak görüntüle"><img src="assets/certificates/cisco-ag-temelleri.png" alt="Cisco Ağ Temelleri sertifikası" width="1920" height="1358" loading="lazy" decoding="async"></a><div data-tilt-depth="48"><span>BTK Akademi</span><h3>Cisco Ağ Temelleri</h3><a href="assets/certificates/cisco-ag-temelleri.pdf" target="_blank" rel="noopener noreferrer">PDF görüntüle <b aria-hidden="true">↗</b></a></div></article>
+          <article class="certificate-card" data-reveal data-tilt-card><a class="certificate-preview" data-tilt-depth="32" href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" rel="noopener noreferrer" aria-label="İleri Ağ Teknolojileri sertifikasını PDF olarak görüntüle"><img src="assets/certificates/ileri-ag-teknolojileri.png" alt="İleri Ağ Teknolojileri sertifikası" width="1920" height="1358" loading="lazy" decoding="async"></a><div data-tilt-depth="48"><span>BTK Akademi</span><h3>İleri Ağ Teknolojileri</h3><a href="assets/certificates/ileri-ag-teknolojileri.pdf" target="_blank" rel="noopener noreferrer">PDF görüntüle <b aria-hidden="true">↗</b></a></div></article>
+        </div>
+      </div>
+    </section>
 
-            if (reducedMotion) { renderStatic(); return; }
+    <section class="section contact-section" id="iletisim" data-section aria-labelledby="contact-title">
+      <div class="contact-glow"></div>
+      <div class="container contact-layout">
+        <div class="contact-copy" data-reveal><p class="section-kicker">07 / İletişim</p><h2 id="contact-title">Bir sonraki sistemi<br><span class="accent-text">birlikte</span> kuralım.</h2><p>BT fırsatları, projeler ve profesyonel iş birlikleri için tanışalım. Bir e-posta kadar yakınım.</p><a class="button button-primary" href="mailto:taneryigit.it@gmail.com?subject=Tan%C4%B1%C5%9Fma%20ve%20i%C5%9F%20birli%C4%9Fi">Birlikte konuşalım <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-channels" data-reveal>
+          <div class="contact-channel email-channel"><div><span>E-posta</span><a href="mailto:taneryigit.it@gmail.com">taneryigit.it@gmail.com</a></div><button class="copy-email" type="button" hidden aria-label="E-posta adresini kopyala"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"></use></svg></button></div>
+          <a class="contact-channel" href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer"><div><span>LinkedIn</span><strong>Bağlantı kuralım</strong></div><b aria-hidden="true">↗</b></a>
+          <a class="contact-channel" href="https://github.com/taneryigitxl" target="_blank" rel="noopener noreferrer"><div><span>GitHub</span><strong>Kodları keşfedin</strong></div><b aria-hidden="true">↗</b></a>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            // Animated version — total budget ~1.8 s
-            const cmdDelay  = 20;   // ms per char for commands
-            const outDelay  = 18;   // ms per char for outputs
-            let lineIndex = 0;
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#anasayfa"><img src="assets/taner-yigit-mark.svg" width="40" height="40" alt=""><span class="brand-copy"><strong>Taner Yiğit</strong><small>IT Support · Systems · Networking</small></span></a>
+      <p>© 2026 Taner Yiğit. Tüm hakları saklıdır.</p>
+      <div class="footer-links"><a href="https://www.linkedin.com/in/taneryigit/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/taneryigitxl" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#anasayfa">Başa dön ↑</a></div>
+    </div>
+  </footer>
 
-            function nextLine() {
-                if (lineIndex >= lines.length) return;
-                const l = lines[lineIndex++];
-
-                if (l.type === 'cursor') {
-                    body.insertAdjacentHTML('beforeend',
-                        `<div class="text-slate-400 mt-4 flex items-center">${PROMPT} <span class="w-2 h-4 bg-slate-400 animate-pulse ml-2 inline-block"></span></div>`);
-                    return;
-                }
-
-                const row = document.createElement('div');
-                row.className = `whitespace-nowrap ${l.type === 'cmd' ? 'text-slate-400 mt-2' : (l.color || 'text-slate-300') + ' opacity-90'}`;
-                if (l.type === 'cmd') row.innerHTML = `${PROMPT} `;
-                body.appendChild(row);
-
-                const fullText = l.text;
-                let charIndex = 0;
-                const delay = l.type === 'cmd' ? cmdDelay : outDelay;
-                const cursor = document.createElement('span');
-                cursor.className = 'w-1.5 h-3 bg-accent inline-block ml-0.5 animate-pulse align-middle';
-                row.appendChild(cursor);
-
-                function typeChar() {
-                    if (charIndex < fullText.length) {
-                        cursor.insertAdjacentText('beforebegin', fullText[charIndex++]);
-                        setTimeout(typeChar, delay);
-                    } else {
-                        cursor.remove();
-                        setTimeout(nextLine, l.type === 'cmd' ? 80 : 30);
-                    }
-                }
-                typeChar();
-            }
-
-            // Trigger animation when terminal enters viewport (threshold: 0.3)
-            const terminalEl = document.getElementById('terminal-body').closest('[aria-hidden]');
-            let terminalStarted = false;
-            const terminalObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !terminalStarted) {
-                        terminalStarted = true;
-                        terminalObserver.disconnect();
-                        setTimeout(nextLine, 200); // small delay for visual polish
-                    }
-                });
-            }, { threshold: 0.3 });
-            if (terminalEl) terminalObserver.observe(terminalEl);
-            else setTimeout(nextLine, 1050); // fallback
-        })();
-        // ──────────────────────────────────────────────────────────────────────
-
-        // Spotlight effect on Bento Cards
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-
-        // Intersection Observer for Fade-up Animations with instant viewport check
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight) {
-                el.classList.add('visible');
-            } else {
-                observer.observe(el);
-            }
-        });
-
-        // Mobile Menu Toggle & Accessibility
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
-
-        function setMobileMenu(open) {
-            const isOpen = open !== undefined ? open : mobileMenu.classList.contains('hidden');
-            if (isOpen) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenuBtn.setAttribute('aria-expanded', 'true');
-                mobileMenuBtn.setAttribute('aria-label', 'Menüyü kapat');
-                mobileMenuIcon.setAttribute('data-lucide', 'x');
-                document.body.classList.add('overflow-hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                mobileMenuBtn.setAttribute('aria-label', 'Menüyü aç');
-                mobileMenuIcon.setAttribute('data-lucide', 'menu');
-                document.body.classList.remove('overflow-hidden');
-            }
-            lucide.createIcons();
-        }
-
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            setMobileMenu();
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                setMobileMenu(false);
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                setMobileMenu(false);
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                setMobileMenu(false);
-            }
-        });
-
-        // ─── Scroll-aware header ──────────────────────────────────────────────
-        const siteHeader = document.querySelector('header');
-        let lastScrollY = 0;
-        window.addEventListener('scroll', () => {
-            const y = window.scrollY;
-            if (y > 20) {
-                siteHeader.style.backdropFilter = 'blur(28px)';
-                siteHeader.style.borderBottomColor = 'rgba(255,255,255,0.10)';
-                siteHeader.style.boxShadow = '0 4px 32px rgba(0,0,0,0.4)';
-            } else {
-                siteHeader.style.backdropFilter = '';
-                siteHeader.style.borderBottomColor = '';
-                siteHeader.style.boxShadow = '';
-            }
-            lastScrollY = y;
-        }, { passive: true });
-        // ─────────────────────────────────────────────────────────────────────
-
-        // Interactive Plexus Network Effect for Canvas
-        const canvas = document.getElementById('plexus-canvas');
-        const ctx = canvas.getContext('2d');
-        let width, height, particles;
-        const connectionDistance = 140;
-        let mouse = { x: null, y: null, radius: 160 };
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        }, { passive: true });
-
-        window.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-
-        function initCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            particles = [];
-            // Mobile: reduce particle density to ease scroll performance
-            const isMobile = width < 768;
-            const particleCount = isMobile
-                ? Math.min(40, Math.floor((width * height) / 28000))
-                : Math.min(100, Math.floor((width * height) / 16000));
-
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    vx: (Math.random() - 0.5) * 0.45,
-                    vy: (Math.random() - 0.5) * 0.45,
-                    radius: Math.random() * 1.5 + 0.6
-                });
-            }
-        }
-
-        // ─── 60 FPS cap using delta time ──────────────────────────────────────
-        const FPS_TARGET = 60;
-        const FRAME_MIN_TIME = 1000 / FPS_TARGET;
-        let lastFrameTime = 0;
-        let animationFrameId;
-
-        function drawPlexus(timestamp) {
-            animationFrameId = requestAnimationFrame(drawPlexus);
-            const delta = timestamp - lastFrameTime;
-            if (delta < FRAME_MIN_TIME) return; // skip frame — too fast
-            lastFrameTime = timestamp - (delta % FRAME_MIN_TIME);
-            // ─────────────────────────────────────────────────────────────────
-
-            ctx.clearRect(0, 0, width, height);
-            
-            // Draw particles and connect them
-            for (let i = 0; i < particles.length; i++) {
-                const p = particles[i];
-                
-                // Move
-                p.x += p.vx;
-                p.y += p.vy;
-                
-                // Bounce cleanly off edges without getting trapped
-                if (p.x < 0) { p.x = 0; p.vx = Math.abs(p.vx); }
-                else if (p.x > width) { p.x = width; p.vx = -Math.abs(p.vx); }
-                
-                if (p.y < 0) { p.y = 0; p.vy = Math.abs(p.vy); }
-                else if (p.y > height) { p.y = height; p.vy = -Math.abs(p.vy); }
-                
-                // Draw Node
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(16, 185, 129, 0.45)';
-                ctx.fill();
-                
-                // Mouse interaction: connect nodes to cursor
-                if (mouse.x !== null && mouse.y !== null) {
-                    const mdx = p.x - mouse.x;
-                    const mdy = p.y - mouse.y;
-                    const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-                    if (mdist < mouse.radius) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(mouse.x, mouse.y);
-                        const mOpacity = 1 - (mdist / mouse.radius);
-                        ctx.strokeStyle = `rgba(16, 185, 129, ${mOpacity * 0.35})`;
-                        ctx.lineWidth = 1;
-                        ctx.stroke();
-                    }
-                }
-
-                // Connect nodes to each other
-                for (let j = i + 1; j < particles.length; j++) {
-                    const p2 = particles[j];
-                    const dx = p.x - p2.x;
-                    const dy = p.y - p2.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (dist < connectionDistance) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        const opacity = 1 - (dist / connectionDistance);
-                        ctx.strokeStyle = `rgba(16, 185, 129, ${opacity * 0.16})`;
-                        ctx.lineWidth = 0.9;
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        // Debounced resize to prevent flicker on mobile address bar collapse
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                if (Math.abs(window.innerWidth - width) > 40 || Math.abs(window.innerHeight - height) > 80) {
-                    initCanvas();
-                }
-            }, 180);
-        }, { passive: true });
-
-        // Pause canvas when page is in background to save battery
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                cancelAnimationFrame(animationFrameId);
-            } else {
-                lastFrameTime = 0; // reset so next frame runs immediately
-                animationFrameId = requestAnimationFrame(drawPlexus);
-            }
-        });
-
-        initCanvas();
-        animationFrameId = requestAnimationFrame(drawPlexus);
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/g5368cx7NHz5mOuzfO8j+uN03Oq1i2t0n40EwLzJq3i+v1TfK+K+jN/P16R+p4Yc2p5ZtA1/2p9K0s/oO+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Aceternity 3D Card Logic -->
-    <script>
-        (function() {
-            function initAceternity() {
-                const containers = document.querySelectorAll('.aceternity-container');
-                containers.forEach(container => {
-                    const card = container.querySelector('.aceternity-card');
-                    if (!card) return;
-                    
-                    const innerItems = card.querySelectorAll('.aceternity-item');
-                    
-                    // Set smooth transition for return
-                    card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                    innerItems.forEach(item => {
-                        item.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                    });
-
-                    container.addEventListener('mousemove', (e) => {
-                        const rect = container.getBoundingClientRect();
-                        
-                        // Center is 0,0
-                        const x = e.clientX - rect.left - rect.width / 2;
-                        const y = e.clientY - rect.top - rect.height / 2;
-                        
-                        // Rotate based on distance (divide by constant to dampen)
-                        const rotateX = -y / 25;
-                        const rotateY = x / 25;
-                        
-                        // Snap immediately to cursor
-                        card.style.transition = 'none';
-                        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                        
-                        // Pop out Z elements
-                        innerItems.forEach(item => {
-                            const tz = item.getAttribute('data-translate-z') || '50px';
-                            item.style.transition = 'none';
-                            item.style.transform = `translateZ(${tz})`;
-                        });
-                    });
-
-                    container.addEventListener('mouseleave', () => {
-                        // Return to zero
-                        card.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-                        
-                        innerItems.forEach(item => {
-                            item.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                            item.style.transform = 'translateZ(0px)';
-                        });
-                    });
-                });
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initAceternity);
-            } else {
-                initAceternity();
-            }
-        })();
-    </script>
+  <svg class="svg-defs" aria-hidden="true">
+    <symbol id="i-copy" viewBox="0 0 24 24"><path d="M8 8h11v11H8zM5 16H3V3h13v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <script src="script.js" defer></script>
 </body>
 </html>

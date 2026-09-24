@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Taner Yiğit logosu</title>
+  <desc id="desc">Mor tonlarda, T ve Y harflerinden oluşan geometrik marka işareti.</desc>
+  <defs>
+    <linearGradient id="g" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C084FC"/>
+      <stop offset=".48" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#D946EF"/>
+    </linearGradient>
+    <linearGradient id="s" x1="18" y1="14" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#0B0814"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="16.5" fill="none" stroke="url(#s)" stroke-opacity=".34"/>
+  <path d="M14 16.5h36L43.5 24H35v24l-6 4V24h-8.5L14 16.5Z" fill="url(#g)"/>
+  <path d="m35 28 7.2 7.7L50 27.4V38L35 52V28Z" fill="#E9D5FF" fill-opacity=".88"/>
+  <path d="m14 16.5 7.4 7.5H35l6.7-7.5H14Z" fill="#F5F3FF" fill-opacity=".16"/>
+</svg>
