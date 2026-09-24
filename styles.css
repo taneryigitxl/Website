@@ -498,7 +498,7 @@ a.contact-channel:hover { padding-inline: 12px; border-color: var(--line-strong)
   .hero-video { object-position: 40% center; }
   .hero-overlay { background: linear-gradient(90deg, rgba(6,5,10,.86) 0%, rgba(7,5,12,.67) 58%, rgba(7,5,12,.27) 100%), linear-gradient(0deg, var(--bg) 0%, transparent 42%); }
   .hero-inner { min-height: 740px; padding-top: 112px; padding-bottom: 74px; }
-  .hero h1 { font-size: clamp(3.8rem, 18vw, 5.2rem); }
+  .hero h1 { font-size: clamp(3.8rem, 18vw, 5.2rem); line-height: 1.02; }
   .hero-role { font-size: .73rem; letter-spacing: 0; }
   .hero-role i { padding-inline: .28em; }
   .hero-lead { max-width: 95%; font-size: .88rem; line-height: 1.7; }
