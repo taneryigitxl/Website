@@ -286,16 +286,12 @@ button { font: inherit; }
 .section-heading > p { max-width: 420px; margin: 0 0 6px; color: var(--muted); line-height: 1.72; }
 .about-section { overflow: hidden; background: linear-gradient(180deg, rgba(26,16,40,.3), transparent 45%); }
 .about-section::before { content: ""; position: absolute; top: 12%; right: -12rem; width: 32rem; height: 32rem; border-radius: 50%; background: rgba(96,46,161,.11); filter: blur(100px); pointer-events: none; }
-.about-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(230px,260px); align-items: center; gap: clamp(48px, 7vw, 100px); }
-.section-intro > p { max-width: 680px; margin: 30px 0 0; color: var(--muted); font-size: 1.03rem; line-height: 1.82; }
-.about-points { margin-top: 44px; border-top: 1px solid var(--line); }
-.about-points > div { display: grid; grid-template-columns: 50px 1fr; gap: 14px; padding: 17px 0; border-bottom: 1px solid var(--line); }
-.about-points span { color: var(--purple); font: 600 .66rem/1.6 ui-monospace, monospace; }
-.about-points p { display: grid; margin: 0; color: var(--muted-2); font-size: .8rem; }
-.about-points strong { color: #ddd7e5; font-size: .88rem; }
+.about-layout { display: grid; grid-template-columns: minmax(0,680px) minmax(230px,270px); align-items: center; justify-content: center; gap: clamp(44px, 6vw, 84px); }
+.section-intro { justify-self: center; text-align: center; }
+.section-intro > p { max-width: 680px; margin: 30px auto 0; color: var(--muted); font-size: 1.03rem; line-height: 1.82; }
 
 @property --frame-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
-.profile-card { position: relative; width: min(100%, 250px); justify-self: end; margin: 0; padding: 10px; border: 2px solid transparent; border-radius: var(--radius-lg); background: linear-gradient(145deg, #231834, #0c0913) padding-box, conic-gradient(from var(--frame-angle), rgba(134,80,226,.42), #ad7bff 11%, #eab9ff 14%, rgba(134,80,226,.42) 20%, rgba(134,80,226,.34) 65%, #9d6aff 78%, rgba(134,80,226,.42) 84%) border-box; box-shadow: 0 0 28px rgba(124,67,218,.15), var(--shadow); animation: frame-current 8s linear infinite; }
+.profile-card { position: relative; width: min(100%, 250px); justify-self: center; margin: 0; padding: 10px; border: 2px solid transparent; border-radius: var(--radius-lg); background: linear-gradient(145deg, #231834, #0c0913) padding-box, conic-gradient(from var(--frame-angle), rgba(134,80,226,.42), #ad7bff 11%, #eab9ff 14%, rgba(134,80,226,.42) 20%, rgba(134,80,226,.34) 65%, #9d6aff 78%, rgba(134,80,226,.42) 84%) border-box; box-shadow: 0 0 28px rgba(124,67,218,.15), var(--shadow); animation: frame-current 8s linear infinite; }
 .profile-card::before { content: ""; position: absolute; z-index: -1; inset: -5px; border-radius: inherit; background: rgba(146,83,255,.28); filter: blur(18px); opacity: .4; pointer-events: none; animation: frame-glow 4s ease-in-out infinite alternate; }
 @keyframes frame-current { to { --frame-angle: 360deg; } }
 @keyframes frame-glow { to { opacity: .72; } }
@@ -352,9 +348,9 @@ button { font: inherit; }
 
 .projects-section { background: #09070e; }
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
-.project-card { display: flex; min-height: 460px; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(16,12,24,.82); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
-.project-career { border-top-color: rgba(184,144,255,.38); background: linear-gradient(180deg, rgba(24,17,36,.92), rgba(15,11,23,.84)); }
-.project-card:hover { --card-lift: -5px; border-color: var(--line-strong); box-shadow: 0 24px 70px rgba(0,0,0,.28); }
+.project-card { --card-fill: linear-gradient(rgba(16,12,24,.9), rgba(16,12,24,.9)); display: flex; min-height: 460px; flex-direction: column; overflow: hidden; border: 1px solid transparent; border-radius: var(--radius); background: var(--card-fill) padding-box, conic-gradient(from var(--frame-angle), rgba(134,80,226,.28), #a877ff 10%, #e0b4ff 13%, rgba(134,80,226,.26) 19%, rgba(134,80,226,.2) 66%, #9360ed 78%, rgba(134,80,226,.28) 85%) border-box; box-shadow: 0 0 16px rgba(124,67,218,.08), 0 18px 55px rgba(0,0,0,.22); animation: frame-current 11s linear infinite, card-frame-glow 4.8s ease-in-out infinite alternate; transition: transform .3s ease; }
+.project-career { --card-fill: linear-gradient(180deg, rgba(24,17,36,.96), rgba(15,11,23,.92)); }
+.project-card:hover { --card-lift: -5px; }
 .project-media { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; flex: 0 0 auto; overflow: hidden; background: #110d19; }
 .project-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(7,5,11,.55), transparent 55%); pointer-events: none; }
 .project-media > img:first-child { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.76) brightness(.72); transition: transform .55s cubic-bezier(.2,.75,.25,1), filter .4s ease; }
@@ -374,8 +370,8 @@ button { font: inherit; }
 .certificate-card { grid-column: span 2; }
 .certificate-card:nth-last-child(2) { grid-column: 2 / span 2; }
 .certificate-card:last-child { grid-column: 4 / span 2; }
-.certificate-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(15,11,22,.72); transition: transform .25s ease, border-color .25s ease; }
-.certificate-card:hover { --card-lift: -4px; border-color: var(--line-strong); }
+.certificate-card { --card-fill: linear-gradient(rgba(15,11,22,.9), rgba(15,11,22,.9)); overflow: hidden; border: 1px solid transparent; border-radius: var(--radius); background: var(--card-fill) padding-box, conic-gradient(from var(--frame-angle), rgba(134,80,226,.26), #a877ff 10%, #e0b4ff 13%, rgba(134,80,226,.24) 19%, rgba(134,80,226,.18) 66%, #9360ed 78%, rgba(134,80,226,.26) 85%) border-box; box-shadow: 0 0 15px rgba(124,67,218,.07), 0 18px 50px rgba(0,0,0,.2); animation: frame-current 12s linear infinite, card-frame-glow 5.2s ease-in-out infinite alternate; transition: transform .25s ease; }
+.certificate-card:hover { --card-lift: -4px; }
 .certificate-preview { position: relative; display: flex; aspect-ratio: 1.42; align-items: center; justify-content: center; overflow: hidden; padding: 20px; border-bottom: 1px solid var(--line); background: #120f19; }
 .certificate-preview::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(9,7,14,.4), transparent 55%); pointer-events: none; }
 .certificate-preview img { width: 100%; height: 100%; object-fit: contain; filter: saturate(.72) brightness(.82); transition: filter .25s ease, transform .3s ease; }
@@ -386,6 +382,10 @@ button { font: inherit; }
 .certificate-card > div > a { color: var(--muted); font-size: .74rem; font-weight: 600; }
 .certificate-card > div > a:hover { color: #fff; }
 .certificate-card b { margin-left: 5px; color: var(--purple-light); }
+
+@keyframes card-frame-glow {
+  to { box-shadow: 0 0 28px rgba(151,92,245,.2), 0 24px 65px rgba(0,0,0,.28); }
+}
 
 .contact-section { overflow: hidden; padding-block: clamp(110px, 12vw, 180px); background: #08060d; }
 .contact-glow { position: absolute; top: 50%; left: 45%; width: 40rem; height: 40rem; border-radius: 50%; background: radial-gradient(circle, rgba(111,53,195,.17), transparent 65%); transform: translate(-50%,-50%); pointer-events: none; }
