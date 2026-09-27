@@ -198,7 +198,7 @@ button { font: inherit; }
   display: block;
   visibility: visible;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
   opacity: 1;
   pointer-events: none;
   transition: opacity .8s ease;
@@ -207,7 +207,7 @@ button { font: inherit; }
 .hero-overlay {
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(6,5,10,.94) 0%, rgba(7,5,12,.82) 29%, rgba(7,5,12,.22) 54%, rgba(7,5,12,.08) 76%, rgba(7,5,12,.22) 100%),
+    linear-gradient(90deg, rgba(6,5,10,.94) 0%, rgba(7,5,12,.82) 29%, rgba(7,5,12,.12) 54%, rgba(7,5,12,.06) 76%, rgba(7,5,12,.18) 100%),
     linear-gradient(0deg, var(--bg) 0%, transparent 25%, rgba(5,4,9,.12) 100%);
 }
 .hero-grid {
