@@ -50,22 +50,16 @@
     if (!ambientVideo) return;
     if (reducedMotion.matches) {
       ambientVideo.pause();
-      hero?.classList.remove('video-active');
       return;
     }
     ambientVideo.play().catch(() => {
-      // The wallpaper remains as a complete visual fallback when autoplay is blocked.
-      hero?.classList.remove('video-active');
+      // Keep the video's own frame visible if the browser blocks autoplay.
     });
   }
 
   if (ambientVideo) {
     ambientVideo.muted = true;
     ambientVideo.playsInline = true;
-    ambientVideo.addEventListener('playing', () => hero?.classList.add('video-active'));
-    ['error', 'emptied'].forEach(eventName => {
-      ambientVideo.addEventListener(eventName, () => hero?.classList.remove('video-active'));
-    });
   }
 
   syncAmbientVideo();
