@@ -7,7 +7,6 @@
   const links = [...navigation.querySelectorAll('a[href^="#"]')];
   const mobile = window.matchMedia('(max-width: 1099px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const ambientVideo = document.querySelector('.hero-video');
   const hero = document.querySelector('.hero');
 
   header.classList.add('nav-ready');
@@ -45,25 +44,6 @@
 
   updateHeader();
   addEventListener('scroll', updateHeader, { passive: true });
-
-  function syncAmbientVideo() {
-    if (!ambientVideo) return;
-    if (reducedMotion.matches) {
-      ambientVideo.pause();
-      return;
-    }
-    ambientVideo.play().catch(() => {
-      // Keep the video's own frame visible if the browser blocks autoplay.
-    });
-  }
-
-  if (ambientVideo) {
-    ambientVideo.muted = true;
-    ambientVideo.playsInline = true;
-  }
-
-  syncAmbientVideo();
-  reducedMotion.addEventListener('change', syncAmbientVideo);
 
   const particleCanvas = document.querySelector('[data-page-particles]');
   const particleContext = particleCanvas?.getContext('2d');
@@ -132,7 +112,7 @@
 
         particleContext.beginPath();
         particleContext.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        particleContext.fillStyle = 'rgba(197, 167, 255, .48)';
+        particleContext.fillStyle = 'rgba(222, 214, 200, .48)';
         particleContext.fill();
 
         if (precisePointer.matches && pointer.x !== null && pointer.y !== null) {
@@ -145,7 +125,7 @@
             particleContext.beginPath();
             particleContext.moveTo(particle.x, particle.y);
             particleContext.lineTo(pointer.x, pointer.y);
-            particleContext.strokeStyle = `rgba(197, 167, 255, ${proximity * .2})`;
+            particleContext.strokeStyle = `rgba(222, 214, 200, ${proximity * .2})`;
             particleContext.lineWidth = .75;
             particleContext.stroke();
 
@@ -171,7 +151,7 @@
           particleContext.beginPath();
           particleContext.moveTo(particle.x, particle.y);
           particleContext.lineTo(other.x, other.y);
-          particleContext.strokeStyle = `rgba(155, 108, 255, ${proximity * .105})`;
+          particleContext.strokeStyle = `rgba(199, 186, 164, ${proximity * .105})`;
           particleContext.lineWidth = .65;
           particleContext.stroke();
         }

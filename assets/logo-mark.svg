@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Taner Yiğit logosu</title>
+  <defs>
+    <linearGradient id="metal" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3EEE5"/>
+      <stop offset=".38" stop-color="#CFC4B1"/>
+      <stop offset=".62" stop-color="#9C917F"/>
+      <stop offset="1" stop-color="#E4DCCD"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="32" cy="36" r="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#0D0D0E"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="16.5" fill="none" stroke="#D9CFBF" stroke-opacity=".18"/>
+  <g fill="url(#metal)" stroke="url(#metal)" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M32 10.5 42 21.4 32 33.2 22 21.4Z"/>
+    <path d="M11.5 26.2C19.6 27.4 26 31.6 30.7 38.6V53.5C19.4 51.9 11.5 41.4 11.5 26.2Z"/>
+    <path d="M52.5 26.2C44.4 27.4 38 31.6 33.3 38.6V53.5C44.6 51.9 52.5 41.4 52.5 26.2Z"/>
+  </g>
+  <g fill="url(#sheen)">
+    <path d="M32 10.5 42 21.4 32 33.2 22 21.4Z"/>
+    <path d="M11.5 26.2C19.6 27.4 26 31.6 30.7 38.6V53.5C19.4 51.9 11.5 41.4 11.5 26.2Z"/>
+    <path d="M52.5 26.2C44.4 27.4 38 31.6 33.3 38.6V53.5C44.6 51.9 52.5 41.4 52.5 26.2Z"/>
+  </g>
+</svg>
