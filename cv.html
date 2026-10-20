@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Taner Yiğit güncel özgeçmişi">
+  <title>Taner Yiğit | Özgeçmiş (CV)</title>
+  <meta name="description" content="Taner Yiğit güncel özgeçmişi: BT desteği, Windows sistemleri, donanım ve ağ operasyonları.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0c0b0a">
   <meta property="og:title" content="Taner Yiğit | Özgeçmiş">
@@ -12,43 +13,179 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:site_name" content="Taner Yiğit">
   <meta property="og:url" content="https://www.yigittaner.com/cv.html">
-  <link rel="canonical" href="https://www.yigittaner.com/cv.html">
   <meta property="og:image" content="https://www.yigittaner.com/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.yigittaner.com/cv.html">
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <title>Taner Yiğit | Özgeçmiş (CV)</title>
   <style>
-    @font-face { font-family: "Inter"; font-display: swap; font-weight: 100 900; src: url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+2000-206F; }
+    @font-face { font-family: "Inter"; font-display: swap; font-weight: 100 900; src: url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+20AC, U+2122, U+2191, U+2193; }
     @font-face { font-family: "Inter"; font-display: swap; font-weight: 100 900; src: url("assets/fonts/inter-latin-ext-wght-normal.woff2") format("woff2-variations"); unicode-range: U+0100-02AF; }
+
     * { box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; margin: 0; background: #0c0b0a; color: #faf8f5; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { display: grid; grid-template-rows: 66px minmax(0, 1fr); overflow: hidden; }
-    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 9px clamp(14px, 3vw, 34px); border-bottom: 1px solid rgba(255,255,255,.09); background: rgba(13,13,12,.95); }
-    .brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-size: .84rem; font-weight: 700; }
-    .brand img { width: 42px; height: 42px; }
-    .actions { display: flex; align-items: center; gap: 10px; }
-    .actions a { padding: 9px 13px; border: 1px solid rgba(255,255,255,.11); border-radius: 10px; color: #c1beb9; text-decoration: none; font-size: .72rem; font-weight: 700; }
-    .actions a:last-child { border-color: rgba(206,195,176,.28); background: rgba(186,170,142,.12); color: #ebe6de; }
-    .actions a:hover { border-color: rgba(215,206,191,.45); color: #fff; }
-    .cv-viewer { display: block; width: 100%; height: 100%; border: 0; }
-    .pdf-fallback { display: grid; min-height: 100%; place-items: center; padding: 24px; color: #b1aea9; text-align: center; }
-    .pdf-fallback a { color: #ded6c8; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: #0c0b0a; color: #1d1c1a; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: inherit; }
     :focus-visible { outline: 2px solid #ded6c8; outline-offset: 3px; }
-    @media (max-width: 540px) { .brand span { display: none; } .actions a:first-child { display: none; } }
+
+    .toolbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px clamp(14px, 3vw, 34px); border-bottom: 1px solid rgba(255,255,255,.09); background: rgba(13,13,12,.95); backdrop-filter: blur(12px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-size: .84rem; font-weight: 700; }
+    .brand img { width: 40px; height: 40px; }
+    .actions { display: flex; align-items: center; gap: 8px; }
+    .actions a, .actions button { padding: 9px 13px; border: 1px solid rgba(255,255,255,.11); border-radius: 10px; background: transparent; color: #c1beb9; font: 700 .72rem/1.2 inherit; font-family: inherit; text-decoration: none; cursor: pointer; }
+    .actions .primary { border-color: rgba(206,195,176,.28); background: rgba(186,170,142,.12); color: #ebe6de; }
+    .actions a:hover, .actions button:hover { border-color: rgba(215,206,191,.45); color: #fff; }
+
+    .sheet { width: min(210mm, calc(100% - 28px)); margin: 28px auto 48px; padding: 14mm 15mm 12mm; border-radius: 6px; background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+
+    .cv-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 12px; border-bottom: 2.5px solid #1d1c1a; }
+    .cv-header h1 { margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em; line-height: 1.1; }
+    .cv-header .role { margin: 6px 0 0; color: #555049; font-size: 12.5px; font-weight: 600; }
+    .cv-header img { width: 74px; height: 92px; flex: 0 0 auto; border-radius: 4px; object-fit: cover; object-position: center top; background: #ded9d4; }
+
+    section { margin-top: 13px; }
+    h2 { margin: 0 0 6px; padding-bottom: 3px; border-bottom: 1px solid #cfcac3; color: #1d1c1a; font-size: 13px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    p, li { margin: 0; color: #2f2d2a; font-size: 10.6px; line-height: 1.5; }
+    .row { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+    .row strong { font-size: 11px; }
+    .row span { flex: 0 0 auto; color: #5c5851; font-size: 10.4px; }
+    ul { margin: 4px 0 0; padding-left: 14px; }
+    li + li { margin-top: 1.5px; }
+    .skills p + p, .certs p + p { margin-top: 2px; }
+    .skills strong, .certs strong { color: #1d1c1a; }
+
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 18px; }
+    .project h3 { display: flex; align-items: center; gap: 7px; margin: 0 0 1px; font-size: 11.2px; font-weight: 750; }
+    .badge { padding: 1.5px 6px; border-radius: 99px; background: #efe9df; color: #6b5a3d; font-size: 8.4px; font-weight: 700; letter-spacing: .02em; }
+    .project .link { color: #6b6760; font-size: 9.8px; }
+    .project .link a { text-decoration: none; }
+
+    .cv-footer { margin-top: 16px; padding-top: 9px; border-top: 2.5px solid #1d1c1a; text-align: center; }
+    .cv-footer p { font-size: 10.6px; font-weight: 700; line-height: 1.6; }
+    .cv-footer a { text-decoration: none; }
+
+    .actions a, .actions button { white-space: nowrap; }
+    @media (max-width: 640px) {
+      .brand span, .actions button { display: none; }
+      .sheet { padding: 22px 18px; }
+      .cv-header h1 { font-size: 24px; }
+      .row { flex-direction: column; gap: 1px; }
+      .projects { grid-template-columns: 1fr; }
+    }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .sheet { width: 210mm; margin: 0; padding: 12mm 15mm 8mm; border-radius: 0; box-shadow: none; }
+      section { margin-top: 10px; }
+      p, li { line-height: 1.42; }
+      .cv-footer { margin-top: 12px; }
+      a { text-decoration: none; }
+    }
   </style>
 </head>
 <body>
   <header class="toolbar">
-    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="42" height="42"><span>Taner Yiğit · Özgeçmiş</span></a>
-    <nav class="actions" aria-label="Özgeçmiş işlemleri"><a href="index.html">← Ana sayfaya dön</a><a href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer">PDF'yi aç ↗</a></nav>
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="40" height="40"><span>Taner Yiğit · Özgeçmiş</span></a>
+    <nav class="actions" aria-label="Özgeçmiş işlemleri">
+      <a href="index.html">← Ana sayfa</a>
+      <button type="button" onclick="window.print()">Yazdır</button>
+      <a class="primary" href="assets/taner-yigit-cv.pdf" download="Taner-Yigit-CV.pdf">PDF indir ↓</a>
+    </nav>
   </header>
-  <object class="cv-viewer" data="assets/taner-yigit-cv.pdf#view=FitH&amp;navpanes=0" type="application/pdf" aria-label="Taner Yiğit özgeçmişi">
-    <div class="pdf-fallback"><p>Tarayıcınız PDF önizlemesini desteklemiyor. <a href="assets/taner-yigit-cv.pdf" target="_blank" rel="noopener noreferrer">Özgeçmiş PDF dosyasını açın.</a></p></div>
-  </object>
+
+  <main class="sheet">
+    <header class="cv-header">
+      <div>
+        <h1>TANER YİĞİT</h1>
+        <p class="role">Bilgi İşlem Uzman Yardımcısı · BT Desteği, Sistemler ve Ağ Teknolojileri</p>
+      </div>
+      <img src="assets/taner-yigit.webp" alt="Taner Yiğit vesikalık fotoğrafı" width="500" height="650">
+    </header>
+
+    <section>
+      <h2>Hakkımda</h2>
+      <p>Son kullanıcı desteği, Windows sistemleri, donanım, ağ ve kurumsal BT operasyonlarında deneyim sahibiyim. 1000+ bilgisayardan oluşan üniversite bilişim altyapısında teknik destek, arıza giderme, cihaz yönetimi ve sistem sürekliliği süreçlerinde görev alıyorum.</p>
+    </section>
+
+    <section>
+      <h2>Eğitim</h2>
+      <div class="row"><strong>İstanbul Kent Üniversitesi - Bilişim Güvenliği Teknolojisi, Ön Lisans</strong><span>2024 - 2026</span></div>
+    </section>
+
+    <section>
+      <h2>Diller &amp; Ek Yetkinlikler</h2>
+      <p>İngilizce: B1 &nbsp;|&nbsp; İleri düzey klavye kullanımı &nbsp;|&nbsp; Adobe Photoshop</p>
+    </section>
+
+    <section>
+      <h2>İş Deneyimi</h2>
+      <div class="row"><strong>İstanbul Nişantaşı Üniversitesi - Bilgi İşlem Uzman Yardımcısı</strong><span>2026 - Günümüz | İstanbul</span></div>
+      <ul>
+        <li>1000+ bilgisayardan oluşan kurumsal bilişim altyapısında son kullanıcı desteği; Windows 10/11 kurulum, format/imaj, sürücü, yazılım ve kullanıcı yapılandırma işlemleri.</li>
+        <li>PC/laptop arıza tespiti ve sökme-toplama; RAM/SSD değişimi, fan temizliği, termal macun, disk klonlama ve BIOS/UEFI ayarları.</li>
+        <li>LAN, TCP/IP, DNS ve DHCP sorun giderme; IP yapılandırma, ping/tracert, IP çakışması tespiti, RJ45, patch panel, switch portu ve fiziksel kablolama desteği.</li>
+        <li>Ağ yazıcısı/tarayıcı, projeksiyon, akıllı tahta ve kamera sistemlerinin kurulum ve arıza giderme süreçleri; laboratuvar bilgisayarlarının bakım ve desteği.</li>
+        <li>Kurum içi destek/talep sistemi üzerinden kayıt takibi ve çözüm; AnyDesk, TeamViewer ve RDP ile uzaktan teknik destek.</li>
+        <li>Envanter ve zimmet takibi, antivirüs ve veri yedekleme işlemleri; temel Active Directory, Microsoft 365, domaine alma ve kullanıcı profili desteği.</li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <h2>Teknik Yetkinlikler</h2>
+      <p><strong>IT Destek:</strong> Help Desk / Tier 1-2, Windows 10/11, format/imaj, yazılım-sürücü kurulumu, kurum içi ticket/talep takibi</p>
+      <p><strong>Ağ &amp; Donanım:</strong> TCP/IP, DNS, DHCP, LAN/WAN, RJ45, switch/patch panel, PC/laptop arıza tespiti, RAM/SSD, BIOS/UEFI, ağ yazıcıları</p>
+      <p><strong>Sistem &amp; Araçlar:</strong> Active Directory (temel), Microsoft 365 (temel), domaine alma/kullanıcı profili (temel), PowerShell, CMD, RDP, AnyDesk, TeamViewer</p>
+      <p><strong>Operasyon:</strong> Kamera, projeksiyon, akıllı tahta, laboratuvar desteği, envanter/zimmet, antivirüs, veri yedekleme</p>
+    </section>
+
+    <section class="certs">
+      <h2>Sertifikalar &amp; Başarılar</h2>
+      <p>Google AI Essentials - Google / Coursera (2026) &nbsp;|&nbsp; Doğrulama: coursera.org/verify/specialization/Y3P4DFVR75LY</p>
+      <p>BTK Akademi - Cisco Ağ Temelleri &nbsp;|&nbsp; BTK Akademi - İleri Ağ Teknolojileri</p>
+      <p>10FastFingers - Türkiye Q Klavye 3.'lük &nbsp;|&nbsp; Dakikada 150 kelime yazma performansı</p>
+    </section>
+
+    <section>
+      <h2>Projeler</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>HyDesk</h3>
+          <p>Rust + Tauri ile geliştirilen açık kaynak uzak masaüstü uygulaması. 9 haneli cihaz numarası veya yerel ağda IP ile onaylı bağlantı; H.264 donanımsal kodlama ve Cloudflare Workers tabanlı sinyalleşme sunucusu.</p>
+          <p class="link"><a href="https://github.com/taneryigitxl/HyDesk">github.com/taneryigitxl/HyDesk</a></p>
+        </article>
+        <article class="project">
+          <h3>Tora Online <span class="badge">Geliştiriliyor</span></h3>
+          <p>Babylon.js ve Vite ile geliştirilen tarayıcı tabanlı izometrik çevrim içi RPG. Node.js WebSocket oyun sunucusu, PostgreSQL veritabanı ve güvenli hesap/oturum sistemi.</p>
+          <p class="link"><a href="https://yigittaner.online/tora-online/">yigittaner.online/tora-online</a></p>
+        </article>
+        <article class="project">
+          <h3>Tondy PC Doctor</h3>
+          <p>Windows bilgisayarlarda sistem bilgilerini ve temel sağlık kontrollerini tek arayüzde sunan masaüstü uygulaması.</p>
+          <p class="link"><a href="https://github.com/taneryigitxl/tondy-pc-doctor">github.com/taneryigitxl/tondy-pc-doctor</a></p>
+        </article>
+        <article class="project">
+          <h3>Flyworm Tweaks</h3>
+          <p>Windows bakım ve performans ayarlarını tek arayüzde toplayan bilgisayar optimizasyon uygulaması.</p>
+          <p class="link"><a href="https://github.com/taneryigitxl/flyworm">github.com/taneryigitxl/flyworm</a></p>
+        </article>
+        <article class="project">
+          <h3>Nita Yollarda</h3>
+          <p>HTML, CSS ve JavaScript ile yapay zekâ desteğiyle geliştirilen web tabanlı 2D platform oyunu.</p>
+          <p class="link"><a href="https://yigittaner.online/">yigittaner.online</a></p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="cv-footer">
+      <p>Kağıthane, İstanbul &nbsp;|&nbsp; <a href="tel:+905364768669">0536 476 86 69</a> &nbsp;|&nbsp; <a href="mailto:taneryigit.it@gmail.com">taneryigit.it@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/taneryigit/">linkedin.com/in/taneryigit</a> &nbsp;|&nbsp; <a href="https://www.yigittaner.com/">yigittaner.com</a></p>
+    </footer>
+  </main>
 </body>
 </html>
