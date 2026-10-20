@@ -8,12 +8,18 @@
   const mobile = window.matchMedia('(max-width: 1099px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const hero = document.querySelector('.hero');
+  const english = document.documentElement.lang === 'en';
+  const text = english
+    ? { open: 'Open menu', close: 'Close menu', copied: 'Email address copied.', copyFailed: 'Could not copy; please select the address manually.' }
+    : { open: 'Menüyü aç', close: 'Menüyü kapat', copied: 'E-posta adresi kopyalandı.', copyFailed: 'Kopyalanamadı; adresi seçerek kopyalayabilirsiniz.' };
+
+  document.querySelectorAll('[data-year]').forEach(item => { item.textContent = new Date().getFullYear(); });
 
   header.classList.add('nav-ready');
 
   function setMenu(open, restoreFocus = false) {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+    toggle.setAttribute('aria-label', open ? text.close : text.open);
     navigation.classList.toggle('is-open', open);
     document.body.classList.toggle('menu-open', open && mobile.matches);
     if (restoreFocus) toggle.focus();
@@ -268,7 +274,26 @@
       if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    updateLanguageLink(current);
   }
+
+  // Keep the reader on the same section when switching between Turkish and English.
+  const languageLink = navigation.querySelector('.nav-lang');
+  const languageBase = languageLink?.getAttribute('href');
+  const sectionPairs = [['anasayfa', 'home'], ['hakkimda', 'about'], ['yetenekler', 'skills'], ['deneyim', 'experience'], ['egitim', 'education'], ['projeler', 'projects'], ['sertifikalar', 'certificates'], ['iletisim', 'contact']];
+  const sectionMap = new Map(sectionPairs.map(([tr, en]) => english ? [en, tr] : [tr, en]));
+
+  function updateLanguageLink(current) {
+    if (!languageLink) return;
+    const target = window.scrollY > 16 ? sectionMap.get(current) : undefined;
+    languageLink.setAttribute('href', target ? `${languageBase}#${target}` : languageBase);
+  }
+
+  // Recompute at click time too, in case a scroll update has not run yet.
+  languageLink?.addEventListener('click', () => {
+    measureSections();
+    updateNavigation();
+  });
 
   function scheduleNavigation(measure = false) {
     if (measure) measureSections();
@@ -277,6 +302,14 @@
     requestAnimationFrame(updateNavigation);
   }
 
+  // Smooth scrolling can cancel the browser's initial jump to a #section, so jump instantly once.
+  function jumpToHash() {
+    const target = window.location.hash && document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }
+
+  jumpToHash();
+  addEventListener('load', jumpToHash, { once: true });
   measureSections();
   updateNavigation();
   addEventListener('scroll', () => scheduleNavigation(), { passive: true });
@@ -367,13 +400,13 @@
       try {
         await navigator.clipboard.writeText('taneryigit.it@gmail.com');
         icon.setAttribute('href', '#i-check');
-        status.textContent = 'E-posta adresi kopyalandı.';
+        status.textContent = text.copied;
         resetTimer = setTimeout(() => {
           icon.setAttribute('href', '#i-copy');
           status.textContent = '';
         }, 2000);
       } catch {
-        status.textContent = 'Kopyalanamadı; adresi seçerek kopyalayabilirsiniz.';
+        status.textContent = text.copyFailed;
       } finally {
         copyButton.disabled = false;
       }

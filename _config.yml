@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) yapılandırması: yerel çalışma dosyalarının yayına çıkmasını engeller.
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - .claude
+  - .tmp
+  - debug.log
+  - "*.md"
